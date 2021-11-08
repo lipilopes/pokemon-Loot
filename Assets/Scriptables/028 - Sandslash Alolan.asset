@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 028 - Sandslash Alolan
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 4069368922192949434, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  sprites:
+  - {fileID: 4069368922192949434, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 5260969477263231851, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 28
+  name: Sandslash
+  description: Fleeing a volcanic eruption, it settled on a snowy mountain. As it
+    races through the snowfields, it sends up a spray of snow.
+  sound: {fileID: 8300000, guid: 05c54e3b3b8723c419ae8dc70015503b, type: 3}
+  types: 0b00000010000000
+  gender: 1
+  genderRatio: 2
+  shiny: 0
+  evolution: 1
+  form: 1

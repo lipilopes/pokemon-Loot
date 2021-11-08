@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 124 - Jynx
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 5475699300668931110, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 3934724885882277067, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 124
+  name: Jynx
+  description: It seductively wiggles its hips as it walks. It can cause people to
+    dance in unison with it.
+  sound: {fileID: 8300000, guid: 9aeff398bac5fb84082c50a2b06ae41a, type: 3}
+  types: 0b00000009000000
+  gender: 0
+  genderRatio: 5
+  shiny: 0
+  evolution: 0
+  form: 0

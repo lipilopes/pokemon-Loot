@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 041 - Zubat
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -3160262404367957395, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 4563774704564869780, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  - {fileID: -968666274155914394, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -200831842334677900, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 41
+  name: Zubat
+  description: Forms colonies in perpetually dark places. Uses ultrasonic waves to
+    identify and approach targets.
+  sound: {fileID: 8300000, guid: c7fae27e5292a6547ac1b339972ec09e, type: 3}
+  types: 0600000004000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 0
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: ada71cedeb9f52549b85c9c4bc24cbf3, type: 2}
+  needAmountToEvolution: 4

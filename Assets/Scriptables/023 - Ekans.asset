@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 023 - Ekans
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 6829383816265286846, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 1532678084640346881, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 23
+  name: Ekans
+  description: Moves silently and stealthily. Eats the eggs of birds, such as Pidgey
+    and Spearow, whole.
+  sound: {fileID: 8300000, guid: 420f31c37d4330f4c8ef9653356e74cb, type: 3}
+  types: 06000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 0
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: af1daa98b6292454e8464aa9033081a3, type: 2}
+  needAmountToEvolution: 4

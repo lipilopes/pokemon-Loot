@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 030 - Nidorina
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 6589171027993759428, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 2413536773058018287, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 30
+  name: Nidorina
+  description: It uses its powerful tail in battle to smash, constrict, then break
+    the prey's bones.
+  sound: {fileID: 8300000, guid: 5cf3921c503c88f4e9eded1ba389462e, type: 3}
+  types: 0600000008000000
+  gender: 0
+  genderRatio: 5
+  shiny: 0
+  evolution: 1
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: a0685ac70b9e81a488ac8afa5317aece, type: 2}
+  needAmountToEvolution: 4

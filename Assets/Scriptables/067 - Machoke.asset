@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 067 - Machoke
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -7602129419818029899, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -8338073507815806250, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 67
+  name: Machoke
+  description: Its muscular body is so powerful, it must wear a power save belt to
+    be able to regulate its motions.
+  sound: {fileID: 8300000, guid: 9430af4ae1bd5834caf0d31766428e07, type: 3}
+  types: 02000000
+  gender: 0
+  genderRatio: 3
+  shiny: 0
+  evolution: 1
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: 884d2ef4cc173a54e85ed02df164aa8a, type: 2}
+  needAmountToEvolution: 8

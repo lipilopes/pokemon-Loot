@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 146 - Moltres
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -7849202661171743577, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 7526724059213044623, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 146
+  name: Moltres
+  description: Known as the legendary bird of fire. Every flap of its wings creates
+    a dazzling flash of flames.
+  sound: {fileID: 8300000, guid: cd4e8cd45e51cee4b846d2d205b1802a, type: 3}
+  types: 0100000004000000
+  gender: 0
+  genderRatio: 7
+  shiny: 0
+  evolution: 0
+  form: 0

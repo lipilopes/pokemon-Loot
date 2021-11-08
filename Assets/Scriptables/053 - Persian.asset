@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 053 - Persian
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -6975654747841474446, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -6929250758768508901, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 53
+  name: Persian
+  description: Adores circular objects. Wanders the streets on a nightly basis to
+    look for dropped loose change.
+  sound: {fileID: 8300000, guid: cfe3689b2b9220a499f1e7f17b040291, type: 3}
+  types: 00000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 1
+  form: 0

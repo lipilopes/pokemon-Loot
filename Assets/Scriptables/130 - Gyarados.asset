@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 130 - Gyarados
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -6650465319005660458, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 3557365396135434977, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  - {fileID: -5749472574041614828, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 3410497495389412763, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 130
+  name: Gyarados
+  description: Rarely seen in the wild. Huge and vicious, it is capable of destroying
+    entire cities in a rage.
+  sound: {fileID: 8300000, guid: 506ac38e663263749972dcb0f61793cf, type: 3}
+  types: 0300000004000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 1
+  form: 0

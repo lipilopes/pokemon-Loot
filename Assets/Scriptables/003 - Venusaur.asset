@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 003 - Venusaur
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -7221458804846374682, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -790418764154736688, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  - {fileID: 2043849823524718031, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -4491025734252959107, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 3
+  name: Venusaur
+  description: The plant blooms when it is absorbing solar energy. It stays on the
+    move to seek sunlight.
+  sound: {fileID: 8300000, guid: 2e156e3fe8f819941a883cd0c88d0239, type: 3}
+  types: 0500000006000000
+  gender: 0
+  genderRatio: 0
+  shiny: 0
+  evolution: 2
+  form: 0

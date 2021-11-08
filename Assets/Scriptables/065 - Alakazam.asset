@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 065 - Alakazam
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: -885856444710632781, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  sprites:
+  - {fileID: -1794145910067836149, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 5150837905800707458, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  - {fileID: -4710855822233205909, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -885856444710632781, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 65
+  name: Alakazam
+  description: Its brain can outperform a super-computer. Its intelligence quotient
+    is said to be 5,000.
+  sound: {fileID: 8300000, guid: 92fa1fde961e25640a95a76e126acebf, type: 3}
+  types: 09000000
+  gender: 1
+  genderRatio: 3
+  shiny: 1
+  evolution: 2
+  form: 0

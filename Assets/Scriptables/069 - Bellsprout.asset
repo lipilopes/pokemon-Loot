@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 069 - Bellsprout
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 3252481023200901925, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -3604645204031988501, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 69
+  name: Bellsprout
+  description: "A carnivorous Pok\xE9mon that traps and eats bugs. It uses its root
+    feet to soak up needed moisture."
+  sound: {fileID: 8300000, guid: 8e9ae3e452c00034cbb85c36c5bcfb15, type: 3}
+  types: 0500000006000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 0
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: 6939ade71edeff940a99b975c0590a8f, type: 2}
+  needAmountToEvolution: 4

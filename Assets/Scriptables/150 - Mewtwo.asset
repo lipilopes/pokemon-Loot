@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 150 - Mewtwo
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 3783113494287742073, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -4107279505829052525, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 150
+  name: Mewtwo
+  description: It was created by a scientist after years of horrific gene splicing
+    and DNA engineering experiments.
+  sound: {fileID: 8300000, guid: b5d075f050d459642b66218f9e9ab8b2, type: 3}
+  types: 09000000
+  gender: 0
+  genderRatio: 7
+  shiny: 0
+  evolution: 0
+  form: 0

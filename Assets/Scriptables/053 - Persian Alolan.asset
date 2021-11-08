@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 053 - Persian Alolan
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 4474026477505546096, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  sprites:
+  - {fileID: 4474026477505546096, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -5854715998331244831, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 53
+  name: Persian
+  description: "This Pok\xE9mon was not originally found in Alola. Human actions
+    caused a surge in their numbers, and they went feral. They're prideful and crafty."
+  sound: {fileID: 8300000, guid: cfe3689b2b9220a499f1e7f17b040291, type: 3}
+  types: 0f000000
+  gender: 1
+  genderRatio: 2
+  shiny: 0
+  evolution: 1
+  form: 1

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 111 - Rhyhorn
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: -8886586260002983300, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -7728554344795195098, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  - {fileID: 8332588956527981699, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 7586673240593744344, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 111
+  name: Rhyhorn
+  description: Its massive bones are 1000 times harder than human bones. It can easily
+    knock a trailer flying.
+  sound: {fileID: 8300000, guid: d4e5be029e6bc9f4195db59c8d32513f, type: 3}
+  types: 080000000a000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 0
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: 001634657483c284ba82b73a021db310, type: 2}
+  needAmountToEvolution: 4

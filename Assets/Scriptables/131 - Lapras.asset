@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 131 - Lapras
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 7258154575049954283, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -3428271677287090185, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 131
+  name: Lapras
+  description: "A Pok\xE9mon that has been overhunted almost to extinction. It can
+    ferry people across the water."
+  sound: {fileID: 8300000, guid: b11e7528854d327448e6cc87ecb13879, type: 3}
+  types: 030000000b000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 0
+  form: 0

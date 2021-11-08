@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 033 - Nidorino
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 6395855567625250539, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: -6346070035516436268, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 33
+  name: Nidorino
+  description: "An aggressive Pok\xE9mon that is quick to attack. The horn on its
+    head secretes a powerful venom."
+  sound: {fileID: 8300000, guid: 510be5a3d74615e4385fc8be38111440, type: 3}
+  types: 06000000
+  gender: 0
+  genderRatio: 6
+  shiny: 0
+  evolution: 1
+  form: 0
+  nextEvolution: {fileID: 11400000, guid: fe1af6a7863e26e45ba6114a4bd0fa56, type: 2}
+  needAmountToEvolution: 4

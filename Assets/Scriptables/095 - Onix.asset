@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
+  m_Name: 095 - Onix
+  m_EditorClassIdentifier: 
+  pokemon: {fileID: 0}
+  sprites:
+  - {fileID: 1272222016486812457, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
+  - {fileID: 6022011455553438558, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
+  id: 95
+  name: Onix
+  description: As it grows, the stone portions of its body harden to become similar
+    to a diamond, but colored black.
+  sound: {fileID: 8300000, guid: 09d357211d8ed6f459d534e29e7c6317, type: 3}
+  types: 0a00000008000000
+  gender: 0
+  genderRatio: 2
+  shiny: 0
+  evolution: 0
+  form: 0
