@@ -4,7 +4,7 @@
  
 ### Chances -> PokeBall -> DropPokeball.cs
  | Chance (Total Sum 100%) | Loot | Exp (shiny +5) | Color |
- | ------------ | ------------ | ------------ |
+ | ------------ | ------------ | ------------ | ------------ |
  | 60% | Common | +5 exp | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF` |
  | 30% | Rare | +10 exp | ![#14DB32](https://via.placeholder.com/15/14DB32/000000?text=+) `#14DB32` |
  | 9% | Epic | +15 exp | ![#1E44DD](https://via.placeholder.com/15/1E44DD/000000?text=+) `#14DB32` |
