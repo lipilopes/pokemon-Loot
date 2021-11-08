@@ -8,7 +8,11 @@
 # Pokemon Loot
 ![GameScreen](https://user-images.githubusercontent.com/26468934/140782344-a710c9e4-b80a-4041-9678-a9d228d40dd9.png)
 
+# Download
+- [Windows](https://lipilopes.itch.io/pokeloot)
+- Web [Coming soon]
  
+# More About Game
 ### Chances -> PokeBall -> DropPokeball.cs
  | Chance (Total Sum 100%) | Loot | Exp[^6] (shiny +5) | Color |
  | ------------ | ------------ | ------------ | ------------ |
