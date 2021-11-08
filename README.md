@@ -1,9 +1,16 @@
+ [^1]: Repeated x1 -> +0.2%. max 15% or x75.
+ [^2]: 1695 = Only Loot Normal Pokemons - 1695/50.
+ [^3]: 2540 = Only Loot Shiny Pokemons - 2540/50.
+ [^4]: Normal or Alolan
+ [^5]: Male, Female or Unknown.
+ [^6]: You will get exp only in pokemons not registered.
+ 
 # Pokemon Loot
 ![GameScreen](https://user-images.githubusercontent.com/26468934/140782344-a710c9e4-b80a-4041-9678-a9d228d40dd9.png)
 
  
 ### Chances -> PokeBall -> DropPokeball.cs
- | Chance (Total Sum 100%) | Loot | Exp (shiny +5) | Color |
+ | Chance (Total Sum 100%) | Loot | Exp[^6] (shiny +5) | Color |
  | ------------ | ------------ | ------------ | ------------ |
  | 60% | Common | +5 exp | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF` |
  | 30% | Rare | +10 exp | ![#14DB32](https://via.placeholder.com/15/14DB32/000000?text=+) `#14DB32` |
@@ -17,16 +24,13 @@
  | +4% | [Bonus] Skip Anim Disable |
  | +5% | [Bonus] Complete Pokedex |
  | +0.2% - 15%[^1] | [Bonus] Repeated Pokemons x1 - 75[^1] |
- [^1]: Repeated x1 -> +0.2%. max 15% or x75.
  
  
-### Exp/Level -> Manager -> ExpLevelManager.cs
+### Exp/Level[^6] -> Manager -> ExpLevelManager.cs
  | Max Exp | Detail |
  | ------------ | ------------ |
  | 33.90[^2] | Level 50 or Less |
  | 50.80[^3] | Level 51 or More |
- [^2]: 1695 = Only Loot Normal Pokemons - 1695/50.
- [^3]: 2540 = Only Loot Shiny Pokemons - 2540/50.
  > Max exp drop -> (Normal[1695]+
 Shiny[2540]) = 4235 or Level 99.
 
@@ -38,8 +42,6 @@ Shiny[2540]) = 4235 or Level 99.
  | "TotalLoot" | "TotalLoot" | int | Sum of total loots |
  | "CompleteDex" | "CompleteDex" | int (0 or 1) | ... |
  | "SkipAnim | "SkipAnim | int (0 or 1) | Toggle Skip Anim |
- [^4]: Normal or Alolan
- [^5]: Male, Female or Unknown.
  
 # Game Scenes
 |  Scenes       |  Caption |
