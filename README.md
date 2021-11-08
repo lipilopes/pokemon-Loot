@@ -1,4 +1,6 @@
-# pokemon Loot
+# Pokemon Loot
+![GameScreen](https://user-images.githubusercontent.com/26468934/140782344-a710c9e4-b80a-4041-9678-a9d228d40dd9.png)
+
  
 ### Chances -> PokeBall -> DropPokeball.cs
  | Chance (Total Sum 100%) | Loot | Color |
@@ -36,7 +38,6 @@ Shiny[2540]) = 4235 or Level 99.
  | "TotalLoot" | "TotalLoot" | int | Sum of total loots |
  | "CompleteDex" | "CompleteDex" | int (0 or 1) | ... |
  | "SkipAnim | "SkipAnim | int (0 or 1) | Toggle Skip Anim |
- |  |  |  |  |
  [^4]: Normal or Alolan
  [^5]: Male, Female or Unknown.
  
