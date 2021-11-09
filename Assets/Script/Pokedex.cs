@@ -349,7 +349,7 @@ public class Pokedex : MonoBehaviour
         {
             int amount = GetAmount(pk);
 
-            //if(amount >= pk.needAmountToEvolution)
+            if(amount >= pk.needAmountToEvolution)
                 return true;
         }
 
