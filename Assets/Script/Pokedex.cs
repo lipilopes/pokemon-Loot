@@ -16,7 +16,6 @@ public class Pokedex : MonoBehaviour
 
     //#if UNITY_EDITOR
     [ContextMenuItem("Check % Dex", "GetPokedexStatus")]
-    [ContextMenuItem("Reset Save", "ResetSave")]
     public bool DeleteThisVarAfter;
     //#endif
     [SerializeField]
@@ -68,9 +67,9 @@ public class Pokedex : MonoBehaviour
     public LootDrop GetLootDrop(string name,Form? form = null)
     {
         if(form ==null)
-            return pokemons.Find(x => x.loot.name == name);
+            return pokemons.Find(x => x.loot.Name == name);
         else
-            return pokemons.Find(x => x.loot.name == name && x.loot.form == form);
+            return pokemons.Find(x => x.loot.Name == name && x.loot.form == form);
     }
 
     public List<LootDrop> GetLoot(LootType lootType)
@@ -277,9 +276,9 @@ public class Pokedex : MonoBehaviour
     public LootScriptable GetPokemon(string name,Form? form = null)
     {
         if(form ==null)
-            return pokemons.Find(x => x.loot.name == name).loot;
+            return pokemons.Find(x => x.loot.Name == name).loot;
         else
-            return pokemons.Find(x => x.loot.name == name && x.loot.form == form).loot;
+            return pokemons.Find(x => x.loot.Name == name && x.loot.form == form).loot;
     }
 
     public LootScriptable GetPokemon(int Id,Form? form = null)
@@ -325,7 +324,7 @@ public class Pokedex : MonoBehaviour
         {
             PlayerPrefs.SetInt(key, 1);
 
-            HudManager.Instance.ToolTipPokedex(pk.pokemon,pk.name,pk.gender,pk.shiny);
+            HudManager.Instance.ToolTipPokedex(pk.pokemon,pk.Name,pk.gender,pk.shiny);
            
             DropRarity r = GetLootDrop(pk).rarity;
             expM.SetExp(expM.GetRarityExp(r),pk.shiny);
@@ -339,7 +338,7 @@ public class Pokedex : MonoBehaviour
         #if UNITY_EDITOR
             DropRarity rarity = GetLootDrop(pk).rarity;
             string[] colors = {"white","green","blue","red"};
-            Debug.Log("<color="+colors[(int)rarity]+">"+(pk.shiny ? "<color=yellow><b>*</b></color> " : "" )+pk.name+" ["+rarity+"] -> "+key+" = x"+PlayerPrefs.GetInt(key)+" / "+PlayerPrefs.GetInt("TotalLoot")+"</color>");
+            Debug.Log("<color="+colors[(int)rarity]+">"+(pk.shiny ? "<color=yellow><b>*</b></color> " : "" )+pk.Name+" ["+rarity+"] -> "+key+" = x"+PlayerPrefs.GetInt(key)+" / "+PlayerPrefs.GetInt("TotalLoot")+"</color>");
         #endif
     }
 
@@ -390,13 +389,13 @@ public class Pokedex : MonoBehaviour
         {                   
             LootScriptable pk = pokemons[i].loot;
 
-            if(pk.name != name)
+            if(pk.Name != name)
             {
                 if(loot > 0)
                     r++; 
 
                 loot = GetTotalCatches(pk,true);
-                name = pk.name;               
+                name = pk.Name;               
             }
             else
             {
@@ -425,13 +424,13 @@ public class Pokedex : MonoBehaviour
         {                   
             LootScriptable pk = pokemons[i].loot;
 
-            if(pk.name != name)
+            if(pk.Name != name)
             {
                 if(loot > 0)
                     r++; 
 
                 loot = GetTotalCatches(pk,onlyShiny: true);
-                name = pk.name;               
+                name = pk.Name;               
             }
             else
             {
@@ -545,13 +544,6 @@ public class Pokedex : MonoBehaviour
         return "#"+pk.id+"_"+f+gender+"_"+shiny;
     }
 
-    public void ResetSave()
-    {
-        PlayerPrefs.DeleteAll();
-
-        Debug.LogWarning("Your save has been Reset");
-    }
-
     void GetPokedexStatus()
     {
         int count               = pokemons.Count;
@@ -589,12 +581,12 @@ public class Pokedex : MonoBehaviour
                 if(loots > 0)//GetTotalCatches
                 {
                     registered++;
-                    Debug.Log(pk.name+"["+pokemons[i].rarity+"] <color=blue>♂["+maleLoot+" / <color=yellow><b>"+shinyMaleLoot+"</b></color>]</color> <color=magenta>♀["+femaleLoot+" / <color=yellow><b>"+shinyFemaleLoot+"</b></color>]</color> - "+loots);
+                    Debug.Log(pk.Name+"["+pokemons[i].rarity+"] <color=blue>♂["+maleLoot+" / <color=yellow><b>"+shinyMaleLoot+"</b></color>]</color> <color=magenta>♀["+femaleLoot+" / <color=yellow><b>"+shinyFemaleLoot+"</b></color>]</color> - "+loots);
                 
                     shinyRegistered += shinyFemaleLoot + shinyMaleLoot;
                 }
                 else
-                    Debug.LogError(pk.name+" ["+pokemons[i].rarity+"] Not Found");
+                    Debug.LogError(pk.Name+" ["+pokemons[i].rarity+"] Not Found");
             }
 
         int total = PlayerPrefs.GetInt("TotalLoot",0);
