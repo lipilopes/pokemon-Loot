@@ -15,11 +15,11 @@ E:/Fellipe L/Projetos/Projetos UNITY/LootBox
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-58106
+61781
 Successfully changed project path to: E:/Fellipe L/Projetos/Projetos UNITY/LootBox
 E:/Fellipe L/Projetos/Projetos UNITY/LootBox
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.16 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 73.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.19f1 (68f137dc9bbe)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.19f1/Editor/Data/Resources/UnitySubsystems
@@ -35,5 +35,5 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
 Begin MonoManager ReloadAssembly

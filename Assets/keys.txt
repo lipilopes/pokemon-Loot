@@ -10,4 +10,6 @@ PlayerPrefs Keys
     *Total Loots        [int]   ->  "TotalLoot"
     *Dex Complet?       [int]   ->  "CompleteDex"
     *Toggle Skip Anim   [int]   ->  "SkipAnim" 
+    *Effect Vol         [Float] ->  "fxVol"
+    *Music Vol          [Float] ->  "musicVol"
 
