@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -4903488974966845267, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 9026508824544715734, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 51
-  name: Dugtrio
+  Name: Dugtrio
   description: A team of Diglett triplets. It triggers huge earthquakes by burrowing
     60 miles underground.
   sound: {fileID: 8300000, guid: f21574e35c7e7d7469f592bd266e8a16, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

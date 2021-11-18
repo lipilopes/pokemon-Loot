@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 2687576829880267217, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -9090326854349221989, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 34
-  name: Nidoking
+  Name: Nidoking
   description: "An aggressive Pok\xE9mon that is quick to attack. The horn on its
     head secretes a powerful venom."
   sound: {fileID: 8300000, guid: fd7018040cce46148b539972cc517bd0, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

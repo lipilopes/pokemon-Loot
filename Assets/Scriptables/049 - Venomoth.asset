@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 5315173096912900370, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 818198096226630171, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 49
-  name: Venomoth
+  Name: Venomoth
   description: The dust-like scales covering its wings are color coded to indicate
     the kinds of poison it has.
   sound: {fileID: 8300000, guid: e719c8bac7d5e5041847222448b2e0e3, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

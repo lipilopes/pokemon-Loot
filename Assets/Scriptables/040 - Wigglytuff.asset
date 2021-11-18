@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -2759350190218624685, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 7989896435468310266, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 40
-  name: Wigglytuff
+  Name: Wigglytuff
   description: The body is soft and rubbery. When angered, it will suck in air and
     inflate itself to an enormous size.
   sound: {fileID: 8300000, guid: 469459a3e5f1d24408a8ff8d064422ad, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

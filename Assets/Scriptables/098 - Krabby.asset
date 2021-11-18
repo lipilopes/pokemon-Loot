@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 4603647943815041140, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5326981984308389883, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 98
-  name: Krabby
+  Name: Krabby
   description: Its pincers are not only powerful weapons, they are used for balance
     when walking sideways.
   sound: {fileID: 8300000, guid: dbc88bb0777217b479def96ce9e580d5, type: 3}

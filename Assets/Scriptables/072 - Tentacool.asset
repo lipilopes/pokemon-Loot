@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7811446306327655785, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -7941524404101694501, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 72
-  name: Tentacool
+  Name: Tentacool
   description: Drifts in shallow seas. Anglers who hook them by accident are often
     punished by its stinging acid.
   sound: {fileID: 8300000, guid: 777bb90c004818c47b29bcfebd417eee, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 5381344519890862722, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1642935415429000155, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 42
-  name: Golbat
+  Name: Golbat
   description: Once it strikes, it will not stop draining energy from the victim
     even if it gets too heavy to fly.
   sound: {fileID: 8300000, guid: b016c82b788c3904885ac66279ff3b53, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 281565115402636825, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 9180703841952866463, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 47
-  name: Parasect
+  Name: Parasect
   description: A host-parasite pair in which the parasite mushroom has taken over
     the host bug. Prefers damp places.
   sound: {fileID: 8300000, guid: 29da61178b708b048b0e9f990fd376ad, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6054524196384948399, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -6474023988946022529, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 37
-  name: Vulpix
+  Name: Vulpix
   description: "It exhales air colder than -58 degrees Fahrenheit. Elderly people
     in Alola call this Pok\xE9mon by an older name\u2014Keokeo."
   sound: {fileID: 8300000, guid: bc909a83f18b8ed48a3f6f893694d853, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6444711437324686333, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5700245252665139704, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 54
-  name: Psyduck
+  Name: Psyduck
   description: "While lulling its enemies with its vacant look, this wily Pok\xE9mon
     will use psychokinetic powers."
   sound: {fileID: 8300000, guid: cea38ac399361d34eb2325f959183f2a, type: 3}

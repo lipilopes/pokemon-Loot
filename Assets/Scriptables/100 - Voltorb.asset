@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -6396963921204522785, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4890965050861845941, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 100
-  name: Voltorb
+  Name: Voltorb
   description: "Usually found in power plants. Easily mistaken for a Pok\xE9 Ball,
     they have zapped many people."
   sound: {fileID: 8300000, guid: b0492073ceefb074fa515b85a5c65c3a, type: 3}

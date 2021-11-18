@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3244634200626261422, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 3958835304230052202, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 91
-  name: Cloyster
+  Name: Cloyster
   description: When attacked, it launches its horns in quick volleys. Its innards
     have never been seen.
   sound: {fileID: 8300000, guid: eeb26a1305daddd4dbdefec7a2fcbe3a, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

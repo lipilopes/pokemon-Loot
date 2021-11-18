@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 1340268477122756931, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 3784889774366521362, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 94
-  name: Gengar
+  Name: Gengar
   description: "Under a full moon, this Pok\xE9mon likes to mimic the shadows of
     people and laugh at their fright."
   sound: {fileID: 8300000, guid: 7f1564eaf80502b4f85c0f29fa9ff775, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

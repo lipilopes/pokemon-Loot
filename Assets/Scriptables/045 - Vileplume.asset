@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -2061542584046666545, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1013535208305587651, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 45
-  name: Vileplume
+  Name: Vileplume
   description: The larger its petals, the more toxic pollen it contains. Its big
     head is heavy and hard to hold up.
   sound: {fileID: 8300000, guid: 94c11fd2764d6cd4ba0c4e0b69da970d, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

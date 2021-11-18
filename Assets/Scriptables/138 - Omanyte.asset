@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 7650931929530726498, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6186558993472746978, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 138
-  name: Omanyte
+  Name: Omanyte
   description: Although long extinct, in rare cases, it can be genetically resurrected
     from fossils.
   sound: {fileID: 8300000, guid: ccc0291701655da45a8816f03353a670, type: 3}

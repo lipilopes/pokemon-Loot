@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -1206173705253621109, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -9101684700682470348, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 27
-  name: Sandshrew
+  Name: Sandshrew
   description: "It lives on snowy mountains. Its steel shell is very hard\u2014so
     much so, it can't roll its body up into a ball."
   sound: {fileID: 8300000, guid: ae74e2329a9a29a42bb0fdfb34d2bf10, type: 3}

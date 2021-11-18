@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -5650642951245093996, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 470904574746842135, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 57
-  name: Primeape
+  Name: Primeape
   description: Always furious and tenacious to boot. It will not abandon chasing
     its quarry until it is caught.
   sound: {fileID: 8300000, guid: 00b291fee4ef28f429bc4af5ceb2d8f2, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

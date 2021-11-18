@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -6919590326136426141, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -4507329871879473235, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 55
-  name: Golduck
+  Name: Golduck
   description: Often seen swimming elegantly by lake shores. It is often mistaken
     for the Japanese monster, Kappa.
   sound: {fileID: 8300000, guid: 6ad95437c23a2cd4386e37f7b6ffa096, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

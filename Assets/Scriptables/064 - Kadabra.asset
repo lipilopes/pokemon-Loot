@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -8491490441865935140, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 8907202667943183107, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 64
-  name: Kadabra
+  Name: Kadabra
   description: It emits special alpha waves from its body that induce headaches just
     by being close by.
   sound: {fileID: 8300000, guid: bfe59ed9844b69346a921251496adb9f, type: 3}

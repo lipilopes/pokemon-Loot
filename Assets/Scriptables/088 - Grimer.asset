@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -6894747000351685937, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 3232940537262050616, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 88
-  name: Grimer
+  Name: Grimer
   description: Appears in filthy areas. Thrives by sucking up polluted sludge that
     is pumped out of factories.
   sound: {fileID: 8300000, guid: 622cebda4877ba241b9698e662463f29, type: 3}

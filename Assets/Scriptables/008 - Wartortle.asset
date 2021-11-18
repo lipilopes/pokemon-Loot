@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -1773293126909635867, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 579706586050723993, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 8
-  name: Wartortle
+  Name: Wartortle
   description: Often hides in water to stalk unwary prey. For swimming fast, it moves
     its ears to maintain balance.
   sound: {fileID: 8300000, guid: 8d907386540fbbc4b93a6192e923e41d, type: 3}

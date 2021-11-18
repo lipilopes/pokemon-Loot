@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 1350803382677389708, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4380536128644193623, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 117
-  name: Seadra
+  Name: Seadra
   description: Capable of swimming backwards by rapidly flapping its wing-like pectoral
     fins and stout tail.
   sound: {fileID: 8300000, guid: 7972025be557744498cab0b579b2e09d, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 2201723662464537330, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6942247896774291410, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 148
-  name: Dragonair
+  Name: Dragonair
   description: "A mystical Pok\xE9mon that exudes a gentle aura. Has the ability
     to change climate conditions."
   sound: {fileID: 8300000, guid: 315b306c14ba8d646a700b2624288d5b, type: 3}

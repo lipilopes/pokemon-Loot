@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8451592510320725607, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 2507474373279797989, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 20
-  name: Raticate
+  Name: Raticate
   description: It forms a group of Rattata, which it assumes command of. Each group
     has its own territory, and disputes over food happen often.
   sound: {fileID: 8300000, guid: 0ade088aff2b72e489822eee47772af8, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

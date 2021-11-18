@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 6807724318213670323, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1099124880537065448, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 19
-  name: Rattata
+  Name: Rattata
   description: Bites anything when it attacks. Small and very quick, it is a common
     sight in many places.
   sound: {fileID: 8300000, guid: f9bddccea00007a40b5bf24589142738, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7830906706544069482, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1873388854903252737, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 46
-  name: Paras
+  Name: Paras
   description: Burrows to suck tree roots. The mushrooms on its back grow by drawing
     nutrients from the bug host.
   sound: {fileID: 8300000, guid: 9595fe68fe45ef749a5a2eda97120b21, type: 3}

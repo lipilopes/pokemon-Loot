@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
   m_Name: 123 - Scyther
   m_EditorClassIdentifier: 
-  pokemon: {fileID: 0}
+  pokemon: {fileID: 8143199509113327802, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   sprites:
   - {fileID: 8143199509113327802, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4930155040979704315, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   - {fileID: 2799499167015620078, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -8531038547917567200, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 123
-  name: Scyther
+  Name: Scyther
   description: With ninja-like agility and speed, it can create the illusion that
     there is more than one.
   sound: {fileID: 8300000, guid: 75a81566ee018cd469e09dc0898b3f4d, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

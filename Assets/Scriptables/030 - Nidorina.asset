@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6589171027993759428, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 2413536773058018287, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 30
-  name: Nidorina
+  Name: Nidorina
   description: It uses its powerful tail in battle to smash, constrict, then break
     the prey's bones.
   sound: {fileID: 8300000, guid: 5cf3921c503c88f4e9eded1ba389462e, type: 3}

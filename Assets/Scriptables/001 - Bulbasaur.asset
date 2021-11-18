@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 4787813750347235787, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -3110481318298912981, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 1
-  name: Bulbasaur
+  Name: Bulbasaur
   description: "A strange seed was planted on its back at birth. The plant sprouts
     and grows with this Pok\xE9mon."
   sound: {fileID: 8300000, guid: 16c2365038245e341b17cb9afd590ab1, type: 3}

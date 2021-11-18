@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 5743323822971309587, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5536666811206845565, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 31
-  name: Nidoqueen
+  Name: Nidoqueen
   description: Its hard scales provide strong protection. It uses its hefty bulk
     to execute powerful moves.
   sound: {fileID: 8300000, guid: bb45030d176d425468ec560293d9a219, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

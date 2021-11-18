@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 4076004337619547978, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 607509714800741251, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 93
-  name: Haunter
+  Name: Haunter
   description: Because of its ability to slip through block walls, it is said to
     be from another dimension.
   sound: {fileID: 8300000, guid: bbef463638e50b040aef8f2a52a58170, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

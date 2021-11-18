@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -1326609174924466383, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -7572822758557101934, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 60
-  name: Poliwag
+  Name: Poliwag
   description: Its newly grown legs prevent it from running. It appears to prefer
     swimming than trying to stand.
   sound: {fileID: 8300000, guid: 0adb64b89c0edb04e8d7ff6c4369cdeb, type: 3}

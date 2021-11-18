@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3084407793074136773, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 8698714851532734979, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 151
-  name: Mew
+  Name: Mew
   description: So rare that it is still said to be a mirage by many experts. Only
     a few people have seen it worldwide.
   sound: {fileID: 8300000, guid: 30c48fd13f87a924eae9c0a5fc12ecdf, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

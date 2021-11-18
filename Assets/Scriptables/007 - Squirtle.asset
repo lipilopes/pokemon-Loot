@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -6545488321725654896, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -908346706586275429, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 7
-  name: Squirtle
+  Name: Squirtle
   description: After birth, its back swells and hardens into a shell. Powerfully
     sprays foam from its mouth.
   sound: {fileID: 8300000, guid: dc0fadccbc4098b419130fb06a34d682, type: 3}

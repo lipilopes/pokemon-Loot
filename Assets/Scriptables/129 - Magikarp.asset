@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -5825655853435550997, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5944916804199776595, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 129
-  name: Magikarp
+  Name: Magikarp
   description: In the distant past, it was somewhat stronger than the horribly weak
     descendants that exist today.
   sound: {fileID: 8300000, guid: 601c16dd04ba958468e067fb572f4970, type: 3}

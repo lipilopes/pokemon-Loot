@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8256173720830021439, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1321032025957947528, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 50
-  name: Diglett
+  Name: Diglett
   description: Its head sports an altered form of whiskers made of metal. When in
     communication with its comrades, its whiskers wobble to and fro.
   sound: {fileID: 8300000, guid: 57e5435227924c247a4836df334c3a07, type: 3}

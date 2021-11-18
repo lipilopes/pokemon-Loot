@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -5899709875881042348, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -3498349202904525764, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 35
-  name: Clefairy
+  Name: Clefairy
   description: Its magical and cute appeal has many admirers. It is rare and found
     only in certain areas.
   sound: {fileID: 8300000, guid: de52711654507b24c95f6196b34c1072, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8686941385830610882, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 3632723555293594857, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 66
-  name: Machop
+  Name: Machop
   description: Loves to build its muscles. It trains in all styles of martial arts
     to become even stronger.
   sound: {fileID: 8300000, guid: d217fbd1840c9e7458050dc6019f0462, type: 3}

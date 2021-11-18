@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 5465721056650962222, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -8055521255690125162, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 5
-  name: Charmeleon
+  Name: Charmeleon
   description: Obviously prefers hot places. When it rains, steam is said to spout
     from the tip of its tail.
   sound: {fileID: 8300000, guid: 48b63e0f09a23034f80f3627d1bfd566, type: 3}

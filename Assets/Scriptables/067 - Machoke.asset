@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7602129419818029899, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -8338073507815806250, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 67
-  name: Machoke
+  Name: Machoke
   description: Its muscular body is so powerful, it must wear a power save belt to
     be able to regulate its motions.
   sound: {fileID: 8300000, guid: 9430af4ae1bd5834caf0d31766428e07, type: 3}

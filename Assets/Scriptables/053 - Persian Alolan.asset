@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 4474026477505546096, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5854715998331244831, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 53
-  name: Persian
+  Name: Persian
   description: "This Pok\xE9mon was not originally found in Alola. Human actions
     caused a surge in their numbers, and they went feral. They're prideful and crafty."
   sound: {fileID: 8300000, guid: cfe3689b2b9220a499f1e7f17b040291, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

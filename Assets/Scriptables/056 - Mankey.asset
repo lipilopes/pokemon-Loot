@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 7711750805838262610, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 8958091148697910168, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 56
-  name: Mankey
+  Name: Mankey
   description: Extremely quick to anger. It could be docile one moment then thrashing
     away the next instant.
   sound: {fileID: 8300000, guid: 00dbdaf2ac296964e92d25674765a01d, type: 3}

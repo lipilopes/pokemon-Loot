@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -4491410160216452620, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4783833696780984339, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 84
-  name: Doduo
+  Name: Doduo
   description: A bird that makes up for its poor flying with its fast foot speed.
     Leaves giant footprints.
   sound: {fileID: 8300000, guid: d9588d3b363293249814d020538cd8c9, type: 3}

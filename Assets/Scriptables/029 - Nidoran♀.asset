@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -3553948508837513723, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -3937578110986154078, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 29
-  name: "Nidoran\u2640"
+  Name: "Nidoran\u2640"
   description: "Although small, its venomous barbs render this Pok\xE9mon dangerous.
     The female has smaller horns."
   sound: {fileID: 8300000, guid: 1ed622103239a614cb34cee639ee96ef, type: 3}

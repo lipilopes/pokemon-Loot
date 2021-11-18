@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7916049830734576920, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 35103049496501016, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 22
-  name: Fearow
+  Name: Fearow
   description: With its huge and magnificent wings, it can keep aloft without ever
     having to land for rest.
   sound: {fileID: 8300000, guid: 6ff3c91746dd3b74c89bdea5e602d61d, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

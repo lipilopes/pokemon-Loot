@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -118044637325343739, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -8106773046715478356, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 21
-  name: Spearow
+  Name: Spearow
   description: Eats bugs in grassy areas. It has to flap its short wings at high
     speed to stay airborne.
   sound: {fileID: 8300000, guid: 36cbbb294c40e8445a95b26f1624d4ec, type: 3}

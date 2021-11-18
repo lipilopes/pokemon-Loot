@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -5749472574041614828, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 3410497495389412763, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 130
-  name: Gyarados
+  Name: Gyarados
   description: Rarely seen in the wild. Huge and vicious, it is capable of destroying
     entire cities in a rage.
   sound: {fileID: 8300000, guid: 506ac38e663263749972dcb0f61793cf, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

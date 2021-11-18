@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 2043849823524718031, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -4491025734252959107, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 3
-  name: Venusaur
+  Name: Venusaur
   description: The plant blooms when it is absorbing solar energy. It stays on the
     move to seek sunlight.
   sound: {fileID: 8300000, guid: 2e156e3fe8f819941a883cd0c88d0239, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

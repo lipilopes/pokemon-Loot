@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 1272222016486812457, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6022011455553438558, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 95
-  name: Onix
+  Name: Onix
   description: As it grows, the stone portions of its body harden to become similar
     to a diamond, but colored black.
   sound: {fileID: 8300000, guid: 09d357211d8ed6f459d534e29e7c6317, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

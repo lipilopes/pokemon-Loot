@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6131382981360413072, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -8977954125362955343, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 143
-  name: Snorlax
+  Name: Snorlax
   description: Very lazy. Just eats and sleeps. As its rotund bulk builds, it becomes
     steadily more slothful.
   sound: {fileID: 8300000, guid: 8277c6c5cbda16c47994916500a7ad6a, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

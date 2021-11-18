@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -6335426436939877455, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 2575900281206248302, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 10
-  name: Caterpie
+  Name: Caterpie
   description: Its short feet are tipped with suction pads that enable it to tirelessly
     climb slopes and walls.
   sound: {fileID: 8300000, guid: d2d5e2e5ebe7d55489bed014f06c7842, type: 3}

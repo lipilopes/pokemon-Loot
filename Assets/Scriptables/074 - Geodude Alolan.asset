@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -570015825735534452, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 434630001305988942, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 74
-  name: Geodude
+  Name: Geodude
   description: Its body is a magnetic stone. Iron sand attaches firmly to the portions
     of its body that are particularly magnetic.
   sound: {fileID: 8300000, guid: b54c00b004ccf4e4fa04bbee97939d26, type: 3}

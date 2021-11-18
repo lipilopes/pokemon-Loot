@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8652253895486596446, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 2667289031968666760, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 76
-  name: Golem
+  Name: Golem
   description: Its boulder-like body is extremely hard. It can easily withstand dynamite
     blasts without damage.
   sound: {fileID: 8300000, guid: 5d727f19249665149a90bfadf502de85, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

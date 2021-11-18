@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -1941653830429671537, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 783403894328242025, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 43
-  name: Oddish
+  Name: Oddish
   description: During the day, it keeps its face buried in the ground. At night,
     it wanders around sowing its seeds.
   sound: {fileID: 8300000, guid: 4690bef68daac91418c6a1c5eda2876c, type: 3}

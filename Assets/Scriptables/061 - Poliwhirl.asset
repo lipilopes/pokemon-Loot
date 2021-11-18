@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 4738504253909251590, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6618416845422893090, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 61
-  name: Poliwhirl
+  Name: Poliwhirl
   description: Capable of living in or out of water. When out of water, it sweats
     to keep its body slimy.
   sound: {fileID: 8300000, guid: 898d97bf6acee1f448256b8250e27cc1, type: 3}

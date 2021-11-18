@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -2768350604219986016, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -665058090971206159, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 103
-  name: Exeggutor
+  Name: Exeggutor
   description: "Alola is the best environment for this Pok\xE9mon. Local people take
     pride in its appearance, saying this is how Exeggutor ought to look."
   sound: {fileID: 8300000, guid: a8a493a09ac82c24594ccec6a7631229, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 822286839452408870, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -2323348769033958619, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 96
-  name: Drowzee
+  Name: Drowzee
   description: Puts enemies to sleep then eats their dreams. Occasionally gets sick
     from eating bad dreams.
   sound: {fileID: 8300000, guid: 9ddc31446f88f604aa94f44a974828af, type: 3}

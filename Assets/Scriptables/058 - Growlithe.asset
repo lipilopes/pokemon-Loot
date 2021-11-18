@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8041833184721956108, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1581945591582811816, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 58
-  name: Growlithe
+  Name: Growlithe
   description: Very protective of its territory. It will bark and bite to repel intruders
     from its space.
   sound: {fileID: 8300000, guid: 348d77038d7238145897e7299d4354a7, type: 3}

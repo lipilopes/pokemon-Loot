@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 4069368922192949434, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 5260969477263231851, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 28
-  name: Sandslash
+  Name: Sandslash
   description: Fleeing a volcanic eruption, it settled on a snowy mountain. As it
     races through the snowfields, it sends up a spray of snow.
   sound: {fileID: 8300000, guid: 05c54e3b3b8723c419ae8dc70015503b, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

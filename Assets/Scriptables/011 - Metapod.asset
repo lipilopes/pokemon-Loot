@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6954259493364704957, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 7360905022548145128, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 11
-  name: Metapod
+  Name: Metapod
   description: "This Pok\xE9mon is vulnerable to attack while its shell is soft,
     exposing its weak and tender body."
   sound: {fileID: 8300000, guid: 4eb77b04be109df4282056371ef1f6dd, type: 3}

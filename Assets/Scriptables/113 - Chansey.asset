@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6453372722942117228, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1389983721992250008, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 113
-  name: Chansey
+  Name: Chansey
   description: "A rare and elusive Pok\xE9mon that is said to bring happiness to
     those who manage to get it."
   sound: {fileID: 8300000, guid: ed2e80994871e8b4ab62968d3c9fcb02, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

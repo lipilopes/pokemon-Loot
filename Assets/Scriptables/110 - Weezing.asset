@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7699062318575718703, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4211288496609849734, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 110
-  name: Weezing
+  Name: Weezing
   description: Where two kinds of poison gases meet, 2 Koffings can fuse into a Weezing
     over many years.
   sound: {fileID: 8300000, guid: 3fa900e03ccdbc64c87276ed276f789e, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

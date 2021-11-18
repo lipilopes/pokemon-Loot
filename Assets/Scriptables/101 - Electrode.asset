@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dc96df882c3554d8b7fde3aa824bd7, type: 3}
   m_Name: 101 - Electrode
   m_EditorClassIdentifier: 
-  pokemon: {fileID: 0}
+  pokemon: {fileID: -8154813480580112905, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   sprites:
   - {fileID: -8154813480580112905, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -6080822471510540228, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 101
-  name: Electrode
+  Name: Electrode
   description: It stores electric energy under very high pressure. It often explodes
     with little or no provocation.
   sound: {fileID: 8300000, guid: d894227f575474e42b17d63361cf4d80, type: 3}
   types: 07000000
-  gender: 0
+  gender: 2
   genderRatio: 7
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

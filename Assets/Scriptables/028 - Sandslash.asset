@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3782972617329189843, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 167636149553898923, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 28
-  name: Sandslash
+  Name: Sandslash
   description: Curls up into a spiny ball when threatened. It can roll while curled
     up to attack or escape.
   sound: {fileID: 8300000, guid: 05c54e3b3b8723c419ae8dc70015503b, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

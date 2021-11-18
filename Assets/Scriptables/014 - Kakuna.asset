@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -4046443211439782829, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4161988696715963424, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 14
-  name: Kakuna
+  Name: Kakuna
   description: "Almost incapable of moving, this Pok\xE9mon can only harden its shell
     to protect itself from predators."
   sound: {fileID: 8300000, guid: 1ac09553de1ec7f4392671145b7f8faf, type: 3}

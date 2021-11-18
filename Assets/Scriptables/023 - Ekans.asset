@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6829383816265286846, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1532678084640346881, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 23
-  name: Ekans
+  Name: Ekans
   description: Moves silently and stealthily. Eats the eggs of birds, such as Pidgey
     and Spearow, whole.
   sound: {fileID: 8300000, guid: 420f31c37d4330f4c8ef9653356e74cb, type: 3}

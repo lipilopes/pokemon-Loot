@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8688278453799018117, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -4352800447836017371, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 48
-  name: Venonat
+  Name: Venonat
   description: Lives in the shadows of tall trees where it eats insects. It is attracted
     by light at night.
   sound: {fileID: 8300000, guid: 8a6ff723cc87f594088169235926a720, type: 3}

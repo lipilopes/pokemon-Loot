@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -968666274155914394, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -200831842334677900, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 41
-  name: Zubat
+  Name: Zubat
   description: Forms colonies in perpetually dark places. Uses ultrasonic waves to
     identify and approach targets.
   sound: {fileID: 8300000, guid: c7fae27e5292a6547ac1b339972ec09e, type: 3}

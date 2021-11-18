@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 8332588956527981699, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 7586673240593744344, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 111
-  name: Rhyhorn
+  Name: Rhyhorn
   description: Its massive bones are 1000 times harder than human bones. It can easily
     knock a trailer flying.
   sound: {fileID: 8300000, guid: d4e5be029e6bc9f4195db59c8d32513f, type: 3}

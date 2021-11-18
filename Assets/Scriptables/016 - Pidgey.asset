@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -5680617101835686980, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 93588727314964933, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 16
-  name: Pidgey
+  Name: Pidgey
   description: A common sight in forests and woods. It flaps its wings at ground
     level to kick up blinding sand.
   sound: {fileID: 8300000, guid: c76244667974def449024021267b399c, type: 3}

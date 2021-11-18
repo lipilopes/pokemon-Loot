@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 7711603573859006135, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1992587564266948912, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 18
-  name: Pidgeot
+  Name: Pidgeot
   description: When hunting, it skims the surface of water at high speed to pick
     off unwary prey such as Magikarp.
   sound: {fileID: 8300000, guid: 405618750bf0144419aaa4ac5c34b0b4, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

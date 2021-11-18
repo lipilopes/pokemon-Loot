@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3740870739529485040, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6118909329015071648, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 90
-  name: Shellder
+  Name: Shellder
   description: Its hard shell repels any kind of attack. It is vulnerable only when
     its shell is open.
   sound: {fileID: 8300000, guid: b45ecb9d4ef07554fa64fd8d381f8140, type: 3}

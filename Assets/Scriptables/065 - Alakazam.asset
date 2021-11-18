@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -4710855822233205909, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -885856444710632781, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 65
-  name: Alakazam
+  Name: Alakazam
   description: Its brain can outperform a super-computer. Its intelligence quotient
     is said to be 5,000.
   sound: {fileID: 8300000, guid: 92fa1fde961e25640a95a76e126acebf, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 1
   evolution: 2
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

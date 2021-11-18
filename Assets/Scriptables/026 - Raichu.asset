@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -3977548349998005640, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1310811121257298026, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 26
-  name: Raichu
+  Name: Raichu
   description: It only evolves to this form in the Alola region. According to researchers,
     its diet is one of the causes of this change.
   sound: {fileID: 8300000, guid: d2f5f7083f82c5545a8d50ccec8f1e4e, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -1027900718573046876, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -2872207509796044368, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 39
-  name: Jigglypuff
+  Name: Jigglypuff
   description: When its huge eyes light up, it sings a mysteriously soothing melody
     that lulls its enemies to sleep.
   sound: {fileID: 8300000, guid: e99988ac548bc164f8e213038e0d62d9, type: 3}

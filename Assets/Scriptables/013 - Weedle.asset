@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3644706390296759288, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 455973437070042590, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 13
-  name: Weedle
+  Name: Weedle
   description: Often found in forests, eating leaves. It has a sharp venomous stinger
     on its head.
   sound: {fileID: 8300000, guid: 13d2985deeef46a408e3e104c45756b0, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 6889712604060785588, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -3681742233772287489, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 118
-  name: Goldeen
+  Name: Goldeen
   description: Its tail fin billows like an elegant ballroom dress, giving it the
     nickname of the Water Queen.
   sound: {fileID: 8300000, guid: 2ed2b05ff5d7605439ce398d5d71083c, type: 3}

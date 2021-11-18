@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 7630658006190665308, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 3235076459096372907, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 102
-  name: Exeggcute
+  Name: Exeggcute
   description: Often mistaken for eggs. When disturbed, they quickly gather and attack
     in swarms.
   sound: {fileID: 8300000, guid: 61fd929144540744fbb35e8ea438ba76, type: 3}

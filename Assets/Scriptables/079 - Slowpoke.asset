@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7582902007994033899, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4808836435710616219, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 79
-  name: Slowpoke
+  Name: Slowpoke
   description: Incredibly slow and dopey. It takes 5 seconds for it to feel pain
     when under attack.
   sound: {fileID: 8300000, guid: 9901a73160dea934aa849aa9fc3278ed, type: 3}

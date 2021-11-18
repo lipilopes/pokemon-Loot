@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -7739220710681296370, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5724777907860209713, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 75
-  name: Graveler
+  Name: Graveler
   description: Rolls down slopes to move. It rolls over any obstacle without slowing
     or changing its direction.
   sound: {fileID: 8300000, guid: 9e73950e77e874c40b4a89a24f0ad709, type: 3}

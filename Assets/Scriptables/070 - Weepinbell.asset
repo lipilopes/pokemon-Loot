@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8550787893134691599, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 5610056651621957551, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 70
-  name: Weepinbell
+  Name: Weepinbell
   description: It spits out PoisonPowder to immobilize the enemy and then finishes
     it with a spray of Acid.
   sound: {fileID: 8300000, guid: ce09cb1de47a8b445b3258569b8be54b, type: 3}

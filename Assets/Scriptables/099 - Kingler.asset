@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3589883434802102185, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1554828846501493947, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 99
-  name: Kingler
+  Name: Kingler
   description: The large pincer has 10000 hp of crushing power. However, its huge
     size makes it unwieldy to use.
   sound: {fileID: 8300000, guid: f05ec8a634eb4d642917bfd5047c9413, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

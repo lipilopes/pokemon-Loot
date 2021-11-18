@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 1826962961953063421, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6328234089574565039, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 108
-  name: Lickitung
+  Name: Lickitung
   description: Its tongue can be extended like a chameleon's. It leaves a tingling
     sensation when it licks enemies.
   sound: {fileID: 8300000, guid: ae7de6b7664b7ad4dbed0421dd64af1f, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

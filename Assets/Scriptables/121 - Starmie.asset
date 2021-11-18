@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -1686587829455373846, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -5639771454192691726, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 121
-  name: Starmie
+  Name: Starmie
   description: Its central core glows with the seven colors of the rainbow. Some
     people value the core as a gem.
   sound: {fileID: 8300000, guid: 53f404aab5f82f04a8ed25820c2e98d2, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

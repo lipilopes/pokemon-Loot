@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 5819230934280671055, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 5235272634197503573, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 38
-  name: Ninetales
+  Name: Ninetales
   description: Very smart and very vengeful. Grabbing one of its many tails could
     result in a 1000-year curse.
   sound: {fileID: 8300000, guid: 339af9aedd2fc0847aac44e92430ad63, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

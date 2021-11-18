@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 1192747782834657042, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -1129169001042472678, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 82
-  name: Magneton
+  Name: Magneton
   description: Formed by several Magnemites linked together. They frequently appear
     when sunspots flare up.
   sound: {fileID: 8300000, guid: 533212dc20e676a4f9598983a66e6007, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

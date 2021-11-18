@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 3830938050964735643, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 8017090800327005782, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 125
-  name: Electabuzz
+  Name: Electabuzz
   description: Normally found near power plants, they can wander away and cause major
     blackouts in cities.
   sound: {fileID: 8300000, guid: 951e0c9ce9f257a4189f7f69b02f54c6, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

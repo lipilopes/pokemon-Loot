@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 207936431757528302, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1686277665939755025, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 81
-  name: Magnemite
+  Name: Magnemite
   description: Uses anti-gravity to stay suspended. Appears without warning and uses
     Thunder Wave and similar moves.
   sound: {fileID: 8300000, guid: a7b2b57437db9b5469b38af420a6d285, type: 3}

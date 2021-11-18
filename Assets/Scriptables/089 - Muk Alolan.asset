@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -5275599648088626055, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1201802235132422871, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 89
-  name: Muk
+  Name: Muk
   description: The garbage it eats causes continuous chemical changes in its body,
     which produce its exceedingly vivid coloration.
   sound: {fileID: 8300000, guid: add3706062b4f324cbd01b4b0c3419a3, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

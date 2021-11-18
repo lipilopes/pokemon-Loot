@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 6123511728892933002, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -9074314204999115130, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 26
-  name: Raichu
+  Name: Raichu
   description: Its long tail serves as a ground to protect itself from its own high
     voltage power.
   sound: {fileID: 8300000, guid: d2f5f7083f82c5545a8d50ccec8f1e4e, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

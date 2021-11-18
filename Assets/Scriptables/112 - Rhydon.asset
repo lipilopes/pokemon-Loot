@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -4979584032952126589, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 6902627859450217110, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 112
-  name: Rhydon
+  Name: Rhydon
   description: Protected by an armor-like hide, it is capable of living in molten
     lava of 3,600 degrees.
   sound: {fileID: 8300000, guid: e577fa06588995746ba2b37a658b2605, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

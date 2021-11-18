@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -263905460259794838, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1420147279408768721, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 145
-  name: Zapdos
+  Name: Zapdos
   description: "A legendary bird Pok\xE9mon that is said to appear from clouds while
     dropping enormous lightning bolts."
   sound: {fileID: 8300000, guid: 56444879b400c56468d3be0ef6174327, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 0
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

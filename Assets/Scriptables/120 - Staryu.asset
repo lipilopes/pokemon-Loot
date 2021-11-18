@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -3232229821622299305, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -4269682179375598620, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 120
-  name: Staryu
+  Name: Staryu
   description: "An enigmatic Pok\xE9mon that can effortlessly regenerate any appendage
     it loses in battle."
   sound: {fileID: 8300000, guid: 5212881301c28fb489abdf335f541871, type: 3}

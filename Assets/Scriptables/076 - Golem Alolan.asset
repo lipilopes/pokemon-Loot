@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -3028210859801500173, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1579776187351033802, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 76
-  name: Golem
+  Name: Golem
   description: It fires rocks charged with electricity. Even if the rock isn't fired
     that accurately, just grazing an opponent will cause numbness and fainting.
   sound: {fileID: 8300000, guid: 5d727f19249665149a90bfadf502de85, type: 3}
@@ -27,3 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 2
   form: 1
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

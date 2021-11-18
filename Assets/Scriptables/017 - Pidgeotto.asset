@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -292749039385389314, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 8893727409329426830, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 17
-  name: Pidgeotto
+  Name: Pidgeotto
   description: "Very protective of its sprawling territorial area, this Pok\xE9mon
     will fiercely peck at any intruder."
   sound: {fileID: 8300000, guid: 7ded5e3bb0d5c254d9032e46e5cb5d63, type: 3}

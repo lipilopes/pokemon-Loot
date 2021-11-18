@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 7998217894257818088, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 5198092952876526882, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 92
-  name: Gastly
+  Name: Gastly
   description: "Almost invisible, this gaseous Pok\xE9mon cloaks the target and puts
     it to sleep without notice."
   sound: {fileID: 8300000, guid: 431b3432972c86649b197fb7f3ebc4c2, type: 3}

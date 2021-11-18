@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -9189208781289190515, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -6520685550271786718, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 52
-  name: Meowth
+  Name: Meowth
   description: Adores circular objects. Wanders the streets on a nightly basis to
     look for dropped loose change.
   sound: {fileID: 8300000, guid: 686119cdf23ef99419100539a7913aa5, type: 3}

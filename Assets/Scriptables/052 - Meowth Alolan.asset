@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 9155777723931527979, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 8987502326645138456, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 52
-  name: Meowth
+  Name: Meowth
   description: "This Pok\xE9mon was not originally found in Alola. Human actions
     caused a surge in their numbers, and they went feral. They're prideful and crafty."
   sound: {fileID: 8300000, guid: 686119cdf23ef99419100539a7913aa5, type: 3}

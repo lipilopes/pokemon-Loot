@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: -5929001170804096041, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: -2762296341935921904, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 77
-  name: Ponyta
+  Name: Ponyta
   description: Its hooves are 10 times harder than diamonds. It can trample anything
     completely flat in little time.
   sound: {fileID: 8300000, guid: c2acc47c7a96c0a4b87db94ea4e24c91, type: 3}

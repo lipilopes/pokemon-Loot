@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 3415974415708950463, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1241247400669924591, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 119
-  name: Seaking
+  Name: Seaking
   description: In the autumn spawning season, they can be seen swimming powerfully
     up rivers and creeks.
   sound: {fileID: 8300000, guid: ed2b8b32bc8b9cb41b8484b5e8fb8c85, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

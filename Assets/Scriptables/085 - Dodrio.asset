@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: -6952620846160749504, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 1064402859823998554, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 85
-  name: Dodrio
+  Name: Dodrio
   description: Uses its three brains to execute complex plans. While two heads sleep,
     one head stays awake.
   sound: {fileID: 8300000, guid: be761d9ddd949e44c900efc78291c47f, type: 3}
@@ -29,3 +29,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
+  nextEvolution: {fileID: 0}
+  needAmountToEvolution: 4

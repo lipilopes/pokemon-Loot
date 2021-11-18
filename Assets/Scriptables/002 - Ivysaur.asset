@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 5002925086906896518, guid: 8f724e511ce16d84ca559a22e2a84d72, type: 3}
   - {fileID: 4739876033572963243, guid: 62640ff118aeacd4c8f31734860223b0, type: 3}
   id: 2
-  name: Ivysaur
+  Name: Ivysaur
   description: When the bulb on its back grows large, it appears to lose the ability
     to stand on its hind legs.
   sound: {fileID: 8300000, guid: f51d4aac7d797094aaa0cfb30263c3c7, type: 3}
