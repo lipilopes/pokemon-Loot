@@ -101,7 +101,7 @@ public class LootScriptable : ScriptableObject
     [Space]
     [Tooltip("Id Pokedex")]
     public int id;
-    public string name;
+    public string Name;
     [TextArea]
     public string description;
     public AudioClip sound;
@@ -241,7 +241,7 @@ public class LootScriptable : ScriptableObject
               value  = 0.01f+completeDex+catchBonus+bonusShiny;
 
         if(catchBonus>0.0)
-            Debug.LogWarning(name+" Bonus Shiny "+(value*100).ToString("F2")+"% catchBonus["+(catchBonus*100).ToString("F3")+"%/"+catches+" - Limit 15%]");
+            Debug.LogWarning(Name+" Bonus Shiny "+(value*100).ToString("F2")+"% catchBonus["+(catchBonus*100).ToString("F3")+"%/"+catches+" - Limit 15%]");
 
         shiny = random <= value;       
     }

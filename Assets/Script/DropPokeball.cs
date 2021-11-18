@@ -343,11 +343,9 @@ public class DropPokeball : MonoBehaviour
         
             case LootType.OnlyGhost: 
                 return DropRarity.Rare;
-            break;
 
             case LootType.OnlyDragon: 
                 return DropRarity.Epic;
-            break;
         }
 
         return null;

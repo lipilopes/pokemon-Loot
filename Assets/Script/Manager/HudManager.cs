@@ -201,7 +201,7 @@ public class HudManager : MonoBehaviour
         PlayAudio   audio = mainPokemon.GetComponent<PlayAudio>();
         Animator    anim  = mainPokemon.GetComponent<Animator>();
 
-        string name     = /*"#"+pk.id+*/" "+pk.name;
+        string name     = /*"#"+pk.id+*/" "+pk.Name;
         bool register   = !pdx.GetPokemonRegistered(pk);//PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk)) <= 1;
         
         mainPokemon.sprite              = pk.pokemon == null ? pk.GetSprite(pk.gender , pk.shiny) : pk.pokemon;
@@ -431,7 +431,7 @@ public class HudManager : MonoBehaviour
 
                 string id = "#"+(pk.id < 10 ? "0" : "")+(pk.id < 100 ? "0" : "")+pk.id;
 
-                string name = id+" "+pk.name;
+                string name = id+" "+pk.Name;
 
                 Color color = LootTypeColors[(int)pdx.GetLootDrop(pk).rarity];
 
@@ -511,7 +511,7 @@ public class HudManager : MonoBehaviour
 
         string id = "#"+(pk.id < 10 ? "0" : "")+(pk.id < 100 ? "0" : "")+pk.id;
 
-        string name = id+" "+pk.name;
+        string name = id+" "+pk.Name;
 
         Color color = LootTypeColors[(int)pdx.GetLootDrop(pk).rarity];
 
@@ -679,7 +679,7 @@ public class HudManager : MonoBehaviour
         if(!shiny)
             pokedexDetailShinyTrigger = false;
 
-        string name = "#"+(pk.id < 10 ? "0" : "")+(pk.id < 100 ? "0" : "")+pk.id+" "+pk.name;
+        string name = "#"+(pk.id < 10 ? "0" : "")+(pk.id < 100 ? "0" : "")+pk.id+" "+pk.Name;
 
         pokedexDetailBgImage.sprite         = backgroundTypes[(int)pk.types[0]];
 
@@ -703,7 +703,7 @@ public class HudManager : MonoBehaviour
         
         if(alolan)
         {
-            pokedexDetailAlolanFormButton.GetComponent<Image>().sprite = pdx.GetPokemon(pk.name,pk.form == Form.Normal ? Form.Alolan : Form.Normal).GetSprite(pk.gender,shiny);
+            pokedexDetailAlolanFormButton.GetComponent<Image>().sprite = pdx.GetPokemon(pk.Name,pk.form == Form.Normal ? Form.Alolan : Form.Normal).GetSprite(pk.gender,shiny);
             pokedexDetailAlolanFormButton.gameObject.SetActive(alolan && PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk,Gender.Female,pk.form == Form.Normal ? Form.Alolan : Form.Normal)) > 0);
         }
         else
@@ -761,7 +761,7 @@ public class HudManager : MonoBehaviour
         evolutionSceneAmountEvolutionButtonText.text = "x"+needEvolved;
         
         evolutionScenePokemonImage.sprite   = p;
-        evolutionScenePanelText.text        = "You'll change x<b>"+needEvolved+"<b>/"+amount+" of <b>"+pk.name.ToUpper()+"s</b> to evolve";
+        evolutionScenePanelText.text        = "You'll change x<b>"+needEvolved+"<b>/"+amount+" of <b>"+pk.Name.ToUpper()+"s</b> to evolve";
 
         return true;
     }
@@ -813,7 +813,7 @@ public class HudManager : MonoBehaviour
         pdx.Evolved(pokedexDetailSelect,gender,pokedexDetailShinyTrigger);
         
         evolutionScenePokemonImage.sprite   = pE;
-        evolutionScenePanelText.text        = "Congratulations! Your "+pokedexDetailSelect.name+" evolved into "+pkE.name;
+        evolutionScenePanelText.text        = "Congratulations! Your "+pokedexDetailSelect.name+" evolved into "+pkE.Name;
 
         Invoke("NextListEvolutionScene",2.5f);
     }
@@ -832,7 +832,7 @@ public class HudManager : MonoBehaviour
     {
         evolutionSceneGo.SetActive(false);
 
-        if(!pokedexDetailGo.active)
+        if(!pokedexDetailGo/*.active*/)
         {
             DisablePokeballAndPokemonMainScreen(false);
             UpdateCurrentScene = CurrentScene.MainScene;
