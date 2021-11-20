@@ -936,14 +936,13 @@ public class HudManager : MonoBehaviour
                 if (tooltipExpLevelTotalImage.fillAmount < tooltipExpLevelNewImage.fillAmount)
             {
                 if ((tooltipExpLevelNewImage.fillAmount - tooltipExpLevelTotalImage.fillAmount) <= 0.19f)//0.77f
-                    tooltipExpLevelTotalImage.fillAmount += 0.002f;
+                    tooltipExpLevelTotalImage.fillAmount += 0.004f;
                 else
-                    tooltipExpLevelTotalImage.fillAmount += 0.009f;
+                    tooltipExpLevelTotalImage.fillAmount += 0.01f;//0.009f;
 
                 yield return null;
             }
         }
-
 
         if(tooltipExpLevelTotalImage.fillAmount == 1)
         {
