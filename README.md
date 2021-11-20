@@ -6,11 +6,11 @@
  [^6]: You will get exp only with not registered pokemons.
  
 # Pokemon Loot
-![GameScreen](https://user-images.githubusercontent.com/26468934/140782344-a710c9e4-b80a-4041-9678-a9d228d40dd9.png)
+![GameScreen](https://user-images.githubusercontent.com/26468934/142738805-4e7487f6-2558-4a70-94a0-2c5d32dd93af.png)
 
-# Download
+# Play In
 - [Windows](https://lipilopes.itch.io/pokeloot)
-- Web [Coming soon]
+- [Web](https://lipilopes.itch.io/pokeloot)
  
 # More About the Game
 ### Chances -> PokeBall -> DropPokeball.cs
@@ -45,16 +45,24 @@ Shiny[2540]) = 4235 or Level 99.
  | "LastPokemonLoot" | "LastPokemonLoot" | int | Last index pokemon loot |
  | "TotalLoot" | "TotalLoot" | int | Sum of total loots |
  | "CompleteDex" | "CompleteDex" | int (0 or 1) | ... |
- | "SkipAnim | "SkipAnim | int (0 or 1) | Toggle Skip Anim |
+ | "SkipAnim" | "SkipAnim" | int (0 or 1) | Toggle Skip Anim |
+ | "fxVol" | "fxVol" | float (-20 to 20) | Effect Vol |
+ | "musicVol" | "fxVol" | float (-20 to 20) | Music Vol |
  
 # Game Scenes
 |  Scenes       |  Caption |
 | ------------ | ------------ |
-| 1. Main Screen ![MainScreen](https://user-images.githubusercontent.com/26468934/140762021-c2a5b484-11b6-4445-8032-3aae4adf3884.png) | 1. Pokemon's Name and Gender.<br />2. Pokemon's Sprite.<br />3. Pokedex Button.<br />4. Loot Button.<br />5. Skip Loot Animation.<br />6. Level Tooltip.<br />7. Pokedex Tooltip (Only for new registered pokemons).  
+| 1. Main Screen ![MainScreen](https://user-images.githubusercontent.com/26468934/142738622-319ccd85-214c-4816-9270-cfff47789e24.png) | 1. Config Button.<br />2. Pokemon's Name and Gender.<br />3. Pokedex Tooltip (Only for new registered pokemons).<br />4. Pokemon's Sprite.<br />5. Level Tooltip.<br />6. Pokedex Button.<br />7. Loot Button.<br />8. Skip Loot Animation.  
 | 2. Pokedex Screen ![PokedexScreen](https://user-images.githubusercontent.com/26468934/140768460-cb3a16f0-a5d4-4887-b221-cf794bdc97bf.png) | 1. Pokemon's Name and Gender.<br />2. Pokemon's Sprite.<br />3. Loot Amount.<br />4. Shiny Effect.<br />5. Border Color Equal To Rarity.
 | 3. Pokedex Detail ![PokedexDetail](https://user-images.githubusercontent.com/26468934/140772846-ac5163d3-2f83-47db-87af-836dd11dee61.png) | 1. Pokemon's ID and Name.<br />2. Change to Female/Male/Shiny or Alolan form.<br />3. Amount (Select Pokemon Gender,Form,...).<br />4. Description.<br />5. Evolution Button.  
 | 4. Evolution Screen ![EvolutionScreen](https://user-images.githubusercontent.com/26468934/140770838-c690d1a9-0082-4663-8c76-4f3faf79ef62.png) ![EvolutionStart](https://user-images.githubusercontent.com/26468934/140771580-1bd1e23b-a4c7-4fba-b6d6-8aa98c271d42.png) ![EvolutionCompleted ](https://user-images.githubusercontent.com/26468934/140771765-caf1ab2e-f0ee-4fd2-8151-c601c45e0b41.png) | 1. Evolution Button.<br />2. Sprite Pokemon<br />3. Need To Evolve (Needed / Has)
 | 5. Loot List Screen ![LootListScreen](https://user-images.githubusercontent.com/26468934/140770095-e5df80a6-27cf-4ee6-a108-3000db476793.png) | 1. Loots.<br />2. New Pokemon Icon. |
+| 6. Config Screen ![ConfigScreen](https://user-images.githubusercontent.com/26468934/142738003-87175424-6bc7-4a23-9e2d-3056cb3ea0f5.png) | 1. Slider Sound Effect.<br />2. Credits Button.<br />3. Reset Button.(Double click to reset) |
+| 6. Credits Screen ![CreditsScreen](https://user-images.githubusercontent.com/26468934/142738045-3a50d785-8ef8-4d9f-b448-cc4ffbd77973.png) | - |
+
+
+
+
 
 
 
