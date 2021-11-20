@@ -1025,7 +1025,7 @@ public class HudManager : MonoBehaviour
     public void SetFxVolume(float value)
     {
         
-        if(value == 25)
+        if(value == -25)
             value = -80;
         
         audioMixer.SetFloat("fxVol",value);
@@ -1036,7 +1036,7 @@ public class HudManager : MonoBehaviour
     public void SetMusicVolume(float value)
     {
         
-        if(value == 25)
+        if(value == -25)
             value = -80; 
 
         audioMixer.SetFloat("musicVol",value);
