@@ -908,7 +908,10 @@ public class HudManager : MonoBehaviour
             tooltipExpLevelAnim.SetTrigger("Show");
             
             if(tooltipExpLevelText.text != ExpLevelManager.Instance.Level.ToString())
+            {
                 UpdateExpLevelUP();
+                tooltipExpLevelTotalImage.fillAmount = 0;
+            }             
         }
 
         tooltipExpLevelNewImage.fillAmount = expM.Exp / expM.MaxExp;
@@ -945,10 +948,10 @@ public class HudManager : MonoBehaviour
         }
 
         if(tooltipExpLevelTotalImage.fillAmount == 1)
-        {
-            UpdateExpLevelUP();
-      
-            yield return waitExpLevel;
+        {   
+            UpdateExpLevelUP();  
+
+            yield return waitExpLevel;  
 
             tooltipExpLevelTotalImage.fillAmount = 0;
             tooltipExpLevelNewImage.fillAmount   = 0;
@@ -956,7 +959,7 @@ public class HudManager : MonoBehaviour
 
         yield return waitExpLevelToClose;
 
-        if(anim)
+        if(anim && tooltipExpLevelNewImage.fillAmount == tooltipExpLevelTotalImage.fillAmount)
             tooltipExpLevelAnim.SetTrigger("Close");
     }
 
