@@ -355,7 +355,7 @@ public class Pokedex : MonoBehaviour
         return false;
     }
 
-    public void Evolved(LootScriptable pk,Gender gender,bool shiny)
+    public LootScriptable Evolved(LootScriptable pk,Gender gender,bool shiny)
     {
         int amount = pk.needAmountToEvolution;
 
@@ -372,6 +372,8 @@ public class Pokedex : MonoBehaviour
         pkE.shiny  = shiny;
 
         SaveInPokedex(pkE);
+
+        return pkE;
     }
 
     public int GetNumberCompleteDex()
