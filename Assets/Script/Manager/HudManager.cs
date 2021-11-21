@@ -780,9 +780,11 @@ public class HudManager : MonoBehaviour
         evolutionSceneEvolutionButtonNextPokemonImage.sprite    = pE;
         
         evolutionSceneAmountEvolutionButtonText.text = "x"+needEvolved;
+
+        string name = shiny ? "<color=yellow>"+pokedexDetailSelect.Name.ToUpper()+"</color>" : pokedexDetailSelect.Name.ToUpper();
         
         evolutionScenePokemonImage.sprite   = p;
-        evolutionScenePanelText.text        = "You'll change x<b>"+needEvolved+"<b>/"+amount+" of <b>"+pk.Name.ToUpper()+"s</b> to evolve";
+        evolutionScenePanelText.text        = "You'll change x<b>"+needEvolved+"<b>/"+amount+" of <b>"+name+"s</b> to evolve";
 
         return true;
     }
@@ -793,7 +795,9 @@ public class HudManager : MonoBehaviour
 
         evolutionScenePokemonImage.sprite   = pokedexDetailSelect.pokemon;
 
-        evolutionScenePanelText.text        = "What?\n"+pokedexDetailSelect.name.ToUpper()+" is evolving!";
+        string name = pokedexDetailShinyTrigger ? "<color=yellow>"+pokedexDetailSelect.Name.ToUpper()+"</color>" : pokedexDetailSelect.Name.ToUpper();
+
+        evolutionScenePanelText.text        = "What?\n"+name+" is evolving!";
 
         evolutionSceneCancelButton.gameObject.SetActive(false);
         evolutionSceneEvolutionButton.gameObject.SetActive(false);
@@ -835,10 +839,13 @@ public class HudManager : MonoBehaviour
         if(pkE.genderRatio != GenderRatio.Genderless)
             gender = pokedexDetailGenderTrigger ? Gender.Male : Gender.Female;
 
-        pdx.Evolved(pokedexDetailSelect,gender,pokedexDetailShinyTrigger);
+        UpdateScene(pdx.Evolved(pokedexDetailSelect,gender,shiny),false,false,false);
+
+        string Oldname  = shiny ? "<color=yellow>"+pokedexDetailSelect.Name.ToUpper()+"</color>"    : pokedexDetailSelect.Name.ToUpper();
+        string Evname   = shiny ? "<color=yellow>"+pkE.Name.ToUpper()+"</color>"                    : pkE.Name.ToUpper();
         
         evolutionScenePokemonImage.sprite   = pE;
-        evolutionScenePanelText.text        = "Congratulations! Your "+pokedexDetailSelect.name+" evolved into "+pkE.Name;
+        evolutionScenePanelText.text        = "Congratulations! Your "+Oldname+" evolved into "+Evname;
 
         Invoke("NextListEvolutionScene",2.5f);
     }
@@ -857,7 +864,7 @@ public class HudManager : MonoBehaviour
     {
         evolutionSceneGo.SetActive(false);
 
-        if(!pokedexDetailGo/*.active*/)
+        if(!pokedexDetailGo)
         {
             DisablePokeballAndPokemonMainScreen(false);
             UpdateCurrentScene = CurrentScene.MainScene;
