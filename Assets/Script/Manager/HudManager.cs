@@ -704,7 +704,7 @@ public class HudManager : MonoBehaviour
         pokedexDetailBgImage.sprite         = backgroundTypes[(int)pk.types[0]];
 
         pokedexDetailPokemonImage.color     = Color.white;
-        pokedexDetailPokemonImage.sprite    = pk.GetSprite(pk.gender,shiny);
+        pokedexDetailPokemonImage.sprite    = pk.GetSprite(pk.gender, pokedexDetailShinyTrigger);
         
         pokedexDetailNameText.color         = LootTypeColors[(int)pdx.GetLootDrop(pk).rarity];
         pokedexDetailNameText.text          = name.ToUpper();
@@ -723,7 +723,7 @@ public class HudManager : MonoBehaviour
         
         if(alolan)
         {
-            pokedexDetailAlolanFormButton.GetComponent<Image>().sprite = pdx.GetPokemon(pk.Name,pk.form == Form.Normal ? Form.Alolan : Form.Normal).GetSprite(pk.gender,shiny);
+            pokedexDetailAlolanFormButton.GetComponent<Image>().sprite = pdx.GetPokemon(pk.Name,pk.form == Form.Normal ? Form.Alolan : Form.Normal).GetSprite(pk.gender,pokedexDetailShinyTrigger);
             pokedexDetailAlolanFormButton.gameObject.SetActive(alolan && PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk,Gender.Female,pk.form == Form.Normal ? Form.Alolan : Form.Normal)) > 0);
         }
         else
@@ -733,7 +733,7 @@ public class HudManager : MonoBehaviour
         {
             pokedexDetailEvolveButton.gameObject.SetActive(true);
             pokedexDetailEvolveButton.onClick.AddListener(() => OpenEvolutionScene(pk));
-            pokedexDetailEvolveImage.sprite = pk.GetSpriteNextEvolution(pk.gender,pk.shiny);
+            pokedexDetailEvolveImage.sprite = pk.GetSpriteNextEvolution(pk.gender, pokedexDetailShinyTrigger);
         }
         else
             pokedexDetailEvolveButton.gameObject.SetActive(false);
@@ -765,9 +765,10 @@ public class HudManager : MonoBehaviour
         pokedexDetailSelect = pk;
         
         LootScriptable pkE   = pk.nextEvolution;
+        bool shiny = pokedexDetailShinyTrigger;
 
-        Sprite p    = pk.pokemon;
-        Sprite pE   = pk.GetSpriteNextEvolution(pk.gender,pokedexDetailShinyTrigger);
+        Sprite p    = pk.GetSprite(pk.gender,shiny);
+        Sprite pE   = pk.GetSpriteNextEvolution(pk.gender,shiny);
 
         int needEvolved = pk.needAmountToEvolution;
         int amount  = pdx.GetAmount(pokedexDetailSelect);
@@ -817,9 +818,13 @@ public class HudManager : MonoBehaviour
 
     void EndEvolved()
     {      
+        pokemonEvolving = false;    
+
+        bool shiny = pokedexDetailShinyTrigger;
+
         LootScriptable pkE   = pokedexDetailSelect.nextEvolution;
 
-        Sprite pE   = pkE.GetSprite(pokedexDetailSelect.gender,pokedexDetailSelect.shiny);
+        Sprite pE   = pkE.GetSprite(pokedexDetailSelect.gender,shiny);
 
         evolutionSceneCancelButton.gameObject.SetActive(true);
          
