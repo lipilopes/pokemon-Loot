@@ -640,6 +640,7 @@ public class HudManager : MonoBehaviour
         if(pdx.CanEvolved(pokedexDetailSelect))
         {
             pokedexDetailEvolveButton.gameObject.SetActive(true);
+            pokedexDetailEvolveButton.onClick.RemoveAllListeners();
             pokedexDetailEvolveButton.onClick.AddListener(() => OpenEvolutionScene(pokedexDetailSelect));
             pokedexDetailEvolveImage.sprite = pokedexDetailSelect.GetSpriteNextEvolution(gender,shiny);
         }
