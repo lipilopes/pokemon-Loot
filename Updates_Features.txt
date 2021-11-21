@@ -1,0 +1,36 @@
+Level Bonus:
+_____Evolution__Stage__________
+01 - 30: Only Evolution Stage #1.
+31 - 49: Only Evolution Stage #1 or #2.
+50 - XX: All Stages.
+______________#_________________
+
+_____Loot__Amount______________
+01 - 10: x1   |  51 - 60: x6
+11 - 20: x2   |  61 - 70: x7	
+21 - 30: x3   |  71 - 80: x8	
+31 - 40: x4   |  81 - 98: x9	
+41 - 50: x5   |  99 - XX: x10
+
+[Player Choose a loot number]
+______________#_________________
+
+_____Loot__Type______________
+50 - XX: All types
+[Psyc,Ghost and Dragon Ban]
+______________#______________
+
+_________Grifts___________
+*Pokedex:
+  -Registered #149: 
+	Allow Drop Mew
+	Allow Drop MewTwo 
+	x1 Mew
+______________#___________
+
+
+
+
+
+
+
