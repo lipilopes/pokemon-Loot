@@ -55,75 +55,10 @@ public class DropPokeball : MonoBehaviour
     public static DropPokeball Instance;
 
     #if UNITY_EDITOR
-    [SerializeField] bool FastCompleteDexOnlyShiny = false;
     [ContextMenuItem("Complete Dex Test", "DROPLOOTTESTE")]
     [ContextMenuItem("Fast Complete Dex", "FASTCOMPLETEDEXTESTE")]
-    #endif
-    [SerializeField]
-    int lootNumber = 1;  
-    WaitForSeconds waitDropLoot = new WaitForSeconds(1.2f);
-    WaitForSeconds waitDropLootShiny = new WaitForSeconds(0.5f+0.4f);//time shiny effect + delay
-    WaitForSeconds waitDropLootWhile = new WaitForSeconds(0);
+    [SerializeField] bool FastCompleteDexOnlyShiny = false;
 
-    IEnumerator DropLootNumber(int lootNumber=-1,bool promo=false)
-    {
-        HudManager.Instance.tooltipPokedexCanActive = false;
-
-        float C=0,R=0,E=0,L=0,S=0;
-
-        List<LootScriptable> dropList = new List<LootScriptable>();
-        LootScriptable pk = null;
-
-        for (int i = 0; i < lootNumber; i++)
-        {
-            //if(!promo)
-                anim.SetTrigger("Open");
-            
-            GetLootType();
-            GetDropRate();
-
-            pk = GetLoot(shinyBonus,maleBonus,femaleBonus);
-
-            Debug.Log(pk+"["+i+"/"+lootNumber+"]");
-
-            while(pk == null)
-            {
-                GetDropRate();
-                pk = GetLoot(shinyBonus,maleBonus,femaleBonus);
-                yield return waitDropLootWhile;
-            }
-
-            HudManager.Instance.UpdateScene(pk,false,playAudio: !HudManager.Instance.SkipAnim);
-
-            dropList.Add(pk);
-
-            if(!HudManager.Instance.SkipAnim && pk.shiny)
-                yield return waitDropLootShiny;
-
-            if(pk.shiny) S++;
-
-            if(currentDropRate == DropRarity.Common) C++;
-            if(currentDropRate == DropRarity.Rare) R++;
-            if(currentDropRate == DropRarity.Epic) E++;
-            if(currentDropRate == DropRarity.Legendary) L++;           
-
-            ResetLootType();
-
-            if(!HudManager.Instance.SkipAnim /*&& !promo*/)
-                yield return waitDropLoot;
-        }
-
-        HudManager.Instance.LootDropList(dropList,C,R,E,L,S);
-        HudManager.Instance.DisableMainScreen(false);
-
-        Debug.LogWarning("Common ["+((C/lootNumber)*100)+"%] "+C+"/"+lootNumber);
-        Debug.LogWarning("Rare ["+((R/lootNumber)*100)+"%] "+R+"/"+lootNumber);
-        Debug.LogWarning("Epic ["+((E/lootNumber)*100)+"%] "+E+"/"+lootNumber);
-        Debug.LogWarning("Legendary ["+((L/lootNumber)*100)+"%] "+L+"/"+lootNumber);
-        Debug.LogWarning("Shiny ["+((S/lootNumber)*100)+"%] "+S+"/"+lootNumber);
-    }
-
-    #if UNITY_EDITOR
     void DROPLOOTTESTE()
     {
         int count = 0;
@@ -185,6 +120,13 @@ public class DropPokeball : MonoBehaviour
     }
     #endif
 
+    [SerializeField]
+    int lootNumber = 1;
+    public int LootNumber { set{ lootNumber = value; } }  
+    WaitForSeconds waitDropLoot = new WaitForSeconds(1.2f);
+    WaitForSeconds waitDropLootShiny = new WaitForSeconds(0.5f+0.4f);//time shiny effect + delay
+    WaitForSeconds waitDropLootWhile = new WaitForSeconds(0);
+
     [Header("Drop Rate")]
     [SerializeField,Range(0,1)]
     float dropRateCommon;
@@ -206,9 +148,10 @@ public class DropPokeball : MonoBehaviour
     float minDropRateLegendary;
     float maxDropRateLegendary;
 
-    [SerializeField]
     DropRarity currentDropRate;
-    public LootType lootType;
+    [SerializeField]
+    LootType        lootType;
+    public LootType LootType{ set { lootType = value; }}
 
     #region Bonus
         //[SerializeField,Range(0,1)]
@@ -254,6 +197,8 @@ public class DropPokeball : MonoBehaviour
 
         minDropRateLegendary = maxDropRateEpic + 0.01f;
         maxDropRateLegendary = minDropRateLegendary + dropRateLegendary;
+
+        LootNumber = PlayerPrefs.GetInt("LootNumber", 1);
     }
 
     public void OpenPokeball()
@@ -271,6 +216,68 @@ public class DropPokeball : MonoBehaviour
             anim.SetTrigger("Open");
     }
 
+    IEnumerator DropLootNumber(int lootNumber=-1,bool promo=false)
+    {
+        HudManager.Instance.tooltipPokedexCanActive = false;
+
+        float C=0,R=0,E=0,L=0,S=0;
+
+        List<LootScriptable> dropList = new List<LootScriptable>();
+        LootScriptable pk = null;
+
+        for (int i = 0; i < lootNumber; i++)
+        {
+            Debug.Log(i+" / "+lootNumber);
+            //if(!promo)
+                anim.SetTrigger("Open");
+            
+            GetLootType();
+            GetDropRate();
+
+            pk = GetLoot(shinyBonus,maleBonus,femaleBonus);
+
+            Debug.Log(pk+"["+i+"/"+lootNumber+"]");
+
+            while(pk == null)
+            {
+                GetDropRate();
+                pk = GetLoot(shinyBonus,maleBonus,femaleBonus);
+                yield return waitDropLootWhile;
+            }
+
+            HudManager.Instance.UpdateScene(pk,false,playAudio: (!HudManager.Instance.SkipAnim || i == (lootNumber-1)));
+
+            dropList.Add(pk);
+
+            if(pk.shiny)
+            {
+               S++; 
+
+               if(!HudManager.Instance.SkipAnim)
+                    yield return waitDropLootShiny;
+            } 
+
+            if(currentDropRate == DropRarity.Common) C++;
+            if(currentDropRate == DropRarity.Rare) R++;
+            if(currentDropRate == DropRarity.Epic) E++;
+            if(currentDropRate == DropRarity.Legendary) L++;           
+
+            ResetLootType();
+
+            if(!HudManager.Instance.SkipAnim /*&& !promo*/)
+                yield return waitDropLoot;
+        }
+
+        HudManager.Instance.LootDropList(dropList,C,R,E,L,S);
+        HudManager.Instance.DisableMainScreen(false);
+
+        Debug.LogWarning("Common ["+((C/lootNumber)*100)+"%] "+C+"/"+lootNumber);
+        Debug.LogWarning("Rare ["+((R/lootNumber)*100)+"%] "+R+"/"+lootNumber);
+        Debug.LogWarning("Epic ["+((E/lootNumber)*100)+"%] "+E+"/"+lootNumber);
+        Debug.LogWarning("Legendary ["+((L/lootNumber)*100)+"%] "+L+"/"+lootNumber);
+        Debug.LogWarning("Shiny ["+((S/lootNumber)*100)+"%] "+S+"/"+lootNumber);
+    }
+
     void Drop()
     {
         if(lootNumber > 1)
@@ -286,18 +293,16 @@ public class DropPokeball : MonoBehaviour
         {
             HudManager.Instance.UpdateScene(loot);
             ResetLootType();
-            lootType = LootType.Normal;
-            lootNumber = 1;
         }
         else
             if(lootType != LootType.Normal)
             {
                 Debug.LogError(lootType+" Not Found ["+currentDropRate+"]");
                 lootNumber = 6;
-                //LootType oldLootType = lootType;
+                LootType oldLootType = lootType;
                 lootType = LootType.Normal;
                 StartCoroutine(DropLootNumber(lootNumber,true));
-                //lootType = oldLootType;
+                lootType = oldLootType;
                 lootNumber = 1;
             }
 
