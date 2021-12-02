@@ -14,10 +14,64 @@ public class Pokedex : MonoBehaviour
 {
     public static Pokedex Instance;
 
-    //#if UNITY_EDITOR
+    #if UNITY_EDITOR
     [ContextMenuItem("Check % Dex", "GetPokedexStatus")]
     public bool DeleteThisVarAfter;
-    //#endif
+
+    void GetPokedexStatus()
+    {
+        int count               = pokemons.Count;
+        float registered        = 0;
+        float shinyRegistered   = 0;
+
+        float C=0,R=0,E=0,L=0,S=0;
+
+        if(PlayerPrefs.GetInt("TotalLoot") > 0)
+            for (int i = 0; i < count; i++)
+            {
+                LootScriptable pk   = pokemons[i].loot;
+                int maleLoot        = GetIntNamePlayerPrefs(pk);
+                int shinyMaleLoot   = GetIntNamePlayerPrefs(pk,shiny: true);
+                int femaleLoot      = 0;
+                int shinyFemaleLoot = 0;
+                int loots           = maleLoot + shinyMaleLoot;          
+
+                if(pk.genderRatio != GenderRatio.OnlyMale && pk.genderRatio != GenderRatio.Genderless)
+                {
+                    femaleLoot  = GetIntNamePlayerPrefs(pk,Gender.Female);
+                    loots       += femaleLoot;
+
+                    shinyFemaleLoot = GetIntNamePlayerPrefs(pk,Gender.Female, true);
+                    loots           += shinyFemaleLoot;
+                }
+
+                if(pk.shiny) S+= shinyFemaleLoot+shinyMaleLoot;
+
+                if(pokemons[i].rarity == DropRarity.Common) C+=loots;
+                if(pokemons[i].rarity == DropRarity.Rare) R+=loots;
+                if(pokemons[i].rarity == DropRarity.Epic) E+=loots;
+                if(pokemons[i].rarity == DropRarity.Legendary) L+=loots; 
+
+                if(loots > 0)//GetTotalCatches
+                {
+                    registered++;
+                    Debug.Log(pk.Name+"["+pokemons[i].rarity+"] <color=blue>♂["+maleLoot+" / <color=yellow><b>"+shinyMaleLoot+"</b></color>]</color> <color=magenta>♀["+femaleLoot+" / <color=yellow><b>"+shinyFemaleLoot+"</b></color>]</color> - "+loots);
+                
+                    shinyRegistered += shinyFemaleLoot + shinyMaleLoot;
+                }
+                else
+                    Debug.LogError(pk.Name+" ["+pokemons[i].rarity+"] Not Found");
+            }
+
+        int total = PlayerPrefs.GetInt("TotalLoot",0);
+        Debug.LogWarning("Common ["+((C/total)*100)+"%] "+C+"/"+total);
+        Debug.LogWarning("Rare ["+((R/total)*100)+"%] "+R+"/"+total);
+        Debug.LogWarning("Epic ["+((E/total)*100)+"%] "+E+"/"+total);
+        Debug.LogWarning("Legendary ["+((L/total)*100)+"%] "+L+"/"+total);
+        Debug.LogWarning("Shiny ["+((S/total)*100)+"%] "+S+"/"+total);
+        Debug.LogWarning("Pokedex["+((registered/count)*100).ToString("F2")+"%] "+registered+" of "+count+" - <color=yellow>"+shinyRegistered+"</color>/"+total);
+    }
+    #endif
     [SerializeField]
     List<LootDrop> pokemons = new List<LootDrop>();
 
@@ -25,6 +79,11 @@ public class Pokedex : MonoBehaviour
 
     int maxID=0;
     public int GetMaxIndex{ get{ return maxID; }}
+
+    int getMaxIndexDrop = 0;
+    public int GetMaxIndexDrop{ get{ return getMaxIndexDrop; }}
+
+    bool countMax = false;
 
     ExpLevelManager expM;
 
@@ -36,12 +95,13 @@ public class Pokedex : MonoBehaviour
         }
         else
             Destroy(this); 
+
+        CountMaxIndex();
     }
 
     private void Start() 
     {
-        CountMaxIndex();
-        expM = ExpLevelManager.Instance; 
+        expM = ExpLevelManager.Instance;
     }
 
     void CountMaxIndex()
@@ -60,10 +120,41 @@ public class Pokedex : MonoBehaviour
             {
                 maxID++;
                 BackId =  currentId;
+
+                if(pokemons[i].canDrop)
+                    getMaxIndexDrop++;
+                #if UNITY_EDITOR
+                else
+                    Debug.LogWarning(pokemons[i].loot.Name+" is Not Dropped!!");
+                #endif
             }
         }
+
+        countMax = true;
     }
 
+    #region Enable Drop
+    public void EnableDrop(LootDrop loot,bool enable = true)
+    {
+        loot.canDrop = enable;        
+    }
+
+    public void EnableDrop(LootScriptable pokemon,bool enable = true)
+    {
+        LootDrop loot = GetLootDrop(pokemon);
+       
+        loot.canDrop  = enable;        
+    }
+
+    public void EnableDrop(int index,bool enable = true)
+    {
+        LootDrop loot = GetLootDrop(index);
+
+        loot.canDrop  = enable;   
+    }
+    #endregion
+
+    #region Get Loot
     public LootDrop GetLootDrop(string name,Form? form = null)
     {
         if(form ==null)
@@ -113,10 +204,24 @@ public class Pokedex : MonoBehaviour
                     );
                 break;
 
+                case LootType.OnlyBasicOrFirstEvolution:
+                  r =  GetAllPokemons.FindAll(
+                        delegate(LootDrop ld)
+                            {return ld.canDrop && (ld.loot.evolution == Evolution.BasicEvolution || ld.loot.evolution == Evolution.FirstEvolution);}
+                    );
+                break;
+
                 case LootType.OnlyFirstEvolution:
                   r =  GetAllPokemons.FindAll(
                         delegate(LootDrop ld)
                             {return ld.canDrop && ld.loot.evolution == Evolution.FirstEvolution;}
+                    );
+                break;
+
+                case LootType.OnlyFirstOrSecondEvolution:
+                  r =  GetAllPokemons.FindAll(
+                        delegate(LootDrop ld)
+                            {return ld.canDrop && (ld.loot.evolution == Evolution.FirstEvolution || ld.loot.evolution == Evolution.SecondEvolution);}
                     );
                 break;
 
@@ -272,7 +377,9 @@ public class Pokedex : MonoBehaviour
         else
             return pokemons.Find(x => x.loot == loot && x.loot.form == form);
     }
+    #endregion
 
+    #region Get Pokemon(s)
     public LootScriptable GetPokemon(string name,Form? form = null)
     {
         if(form ==null)
@@ -307,9 +414,15 @@ public class Pokedex : MonoBehaviour
         r.Add(pokemons.Find(x => x.loot == loot).loot);
         return r;
     }
+    #endregion
 
     public void SaveInPokedex(LootScriptable pk)
     {
+        Debug.Log("SaveInPokedex( "+pk+" )");
+
+        if(pk == null)
+            return;
+
         PlayerPrefs.SetString("LastPokemonLoot",""+pk);
         PlayerPrefs.SetInt("TotalLoot", PlayerPrefs.GetInt("TotalLoot",0)+1);
 
@@ -330,23 +443,39 @@ public class Pokedex : MonoBehaviour
             expM.SetExp(expM.GetRarityExp(r),pk.shiny);
         }
 
-        if(CanEvolved(pk) && GetAmount(pk.nextEvolution) < 1)
-                HudManager.Instance.OpenEvolutionScene(pk);
-
         CompleteDex();
-
+      
         #if UNITY_EDITOR
             DropRarity rarity = GetLootDrop(pk).rarity;
             string[] colors = {"white","green","blue","red"};
             Debug.Log("<color="+colors[(int)rarity]+">"+(pk.shiny ? "<color=yellow><b>*</b></color> " : "" )+pk.Name+" ["+rarity+"] -> "+key+" = x"+PlayerPrefs.GetInt(key)+" / "+PlayerPrefs.GetInt("TotalLoot")+"</color>");
         #endif
+
+        if(CanEvolved(pk))
+        {
+            LootScriptable pkFirstEvolution     = pk.nextEvolution;
+            bool pkFE = pkFirstEvolution != null ? !(GetTotalCatches(pkFirstEvolution,pk.shiny) > 0) : false;
+
+            if(pkFirstEvolution == null || !pkFE)
+                return;
+
+            LootScriptable pkSecondEvolution    = pkFirstEvolution.nextEvolution;
+            bool pkSE = pkSecondEvolution != null ? !(GetTotalCatches(pkSecondEvolution,pk.shiny) > 0) : false;
+
+            if(pkFE || pkSE)
+            {
+                HudManager.Instance.OpenEvolutionScene(pk);
+                Debug.LogWarning("You dont Have a "+pkFirstEvolution.Name+(pkSE ? " or/and "+pkSecondEvolution.Name : ""));
+            }           
+        }       
     }
 
+    #region Evolved
     public bool CanEvolved(LootScriptable pk)
     {
         if(pk.nextEvolution != null)
         {
-            int amount = GetAmount(pk);
+            int amount = GetIntNamePlayerPrefs(pk);
 
             if(amount >= pk.needAmountToEvolution)
                 return true;
@@ -362,6 +491,10 @@ public class Pokedex : MonoBehaviour
         string key = GetKeyNamePlayerPrefs(pk);
 
         int number = PlayerPrefs.GetInt(key) - amount;
+
+        if(number <= 0)
+            number = 1;
+
         PlayerPrefs.SetInt(key, number);
 
         LootScriptable pkE = pk.nextEvolution;
@@ -375,6 +508,7 @@ public class Pokedex : MonoBehaviour
 
         return pkE;
     }
+    #endregion
 
     #region Complete Dex
     public int GetNumberCompleteDex()
@@ -501,7 +635,7 @@ public class Pokedex : MonoBehaviour
         return r;
     }
 
-    public int GetTotalCatchesAlolanRegistered(LootScriptable pk,bool shiny = false,bool onlyShiny=false)
+     public int GetTotalCatchesGender(LootScriptable pk,Gender gender,bool shiny = false,bool onlyShiny=false,bool form =false)
     {
         int r = 0;
         

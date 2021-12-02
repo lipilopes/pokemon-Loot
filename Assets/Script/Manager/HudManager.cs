@@ -44,6 +44,7 @@ public class HudManager : MonoBehaviour
     [SerializeField] Image              genderIconMainPokemon;
     [SerializeField] TextMeshProUGUI    nameMainPokemon;
     [SerializeField] Toggle             skipAnimToggle;
+    [SerializeField] TextMeshProUGUI    LootCountText;
     [SerializeField] Button             caughtButton;
     [SerializeField] Image              mainBackgroundImage;
     [Header("Tooltip Pokedex")]
@@ -103,8 +104,9 @@ public class HudManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI    evolutionSceneAmountEvolutionButtonText;
     List<LootScriptable>                evolutionListPokemons        =   new List<LootScriptable>();
     bool                                pokemonEvolving = false;
-    WaitForSeconds                      timeToEvolve      = new WaitForSeconds(5.5f);
-    WaitForSeconds                      timeAutoOpenScene = new WaitForSeconds(2.5f);
+    WaitForSeconds                      timeToEvolve                = new WaitForSeconds(5.5f);
+    WaitForSeconds                      timeAutoOpenScene           = new WaitForSeconds(2.5f);
+    WaitForSeconds                      timeNextListEvolutionScene  = new WaitForSeconds(5f);
     [Header("Exp/Level")]
     [SerializeField] GameObject         tooltipExpLevelGo;
     [SerializeField] Animator           tooltipExpLevelAnim;
@@ -122,7 +124,13 @@ public class HudManager : MonoBehaviour
     WaitForSeconds                      waitResetToReset = new WaitForSeconds(3);
     [Header("Bonus")]
     [Tooltip("When SkipAnim is deactivated it gains a glow bonus"),Range(0,1)]
-    [SerializeField] float  skipAnimDisableBonusShiny   = 0.04f;
+    [SerializeField] float              skipAnimDisableBonusShiny   = 0.04f;
+    [SerializeField] GameObject         LootAmountGo;
+    [SerializeField] TextMeshProUGUI    LootAmountText;
+    [SerializeField] GameObject         LootTypeGo;
+    [SerializeField] TMP_Dropdown       LootTypeDropdown;
+    [SerializeField] GameObject         BonusTooltipGo;
+    [SerializeField] TextMeshProUGUI    BonusTooltipText;
     [Header("Sprites")]
     [SerializeField] Sprite[]           backgroundTypes;
     [SerializeField] Sprite[]           genders;
@@ -132,11 +140,13 @@ public class HudManager : MonoBehaviour
 
     public Color[] LootTypeColors{ get { return lootTypeColors; } }
 
+    [SerializeField]
     CurrentScene currentScene = CurrentScene.MainScene;
 
     public CurrentScene UpdateCurrentScene{get{return currentScene;} set{ currentScene = value;}}
 
     Pokedex pdx;
+    ExpLevelManager expM;
 
     public bool LootPokemon;
 
@@ -152,11 +162,12 @@ public class HudManager : MonoBehaviour
 
     void Start() 
     {              
-        pdx = Pokedex.Instance;
+        pdx  = Pokedex.Instance;
+        expM = ExpLevelManager.Instance;
 
         LoadingSave();
 
-        dropListExamplePool.Add(dropListExample);
+        dropListExamplePool.Add(dropListExample);   
     }
 
     void LoadingSave()
@@ -166,7 +177,7 @@ public class HudManager : MonoBehaviour
         skipAnimToggle.isOn = SkipAnim;
 
         //Scene
-        string pkId = PlayerPrefs.GetString("LastPokemonLoot");
+        string pkId = PlayerPrefs.GetString("LastPokemonLoot","");
         if(pkId != "")
         {
             Debug.LogWarning("LastPk "+pkId);
@@ -176,8 +187,7 @@ public class HudManager : MonoBehaviour
 
         //Slider
         configFxSlider.value    = PlayerPrefs.GetFloat("fxVol",3);
-        configMusicSlider.value = PlayerPrefs.GetFloat("musicVol",3);       
-        
+        configMusicSlider.value = PlayerPrefs.GetFloat("musicVol",3);     
     }
 
     public void ResetMainPokemon()
@@ -255,10 +265,10 @@ public class HudManager : MonoBehaviour
             DisableMainScreen(false);
 
             if(saveInPokedex)
-                Invoke("NextListEvolutionScene",2.5f);
+                NextListEvolutionScene();
         }
 
-        Debug.Log("UpdateScene("+activeCaughtButton+","+saveInPokedex+") -> "+(UpdateCurrentScene == CurrentScene.MainScene));
+        LootCountText.text = "Loots: x"+ PlayerPrefs.GetInt("TotalLoot",0);
     }
 
     public void UpdateBackground(PokemonType type)
@@ -378,7 +388,7 @@ public class HudManager : MonoBehaviour
             int count = comparePoolCount - poolCount;
             
             for (int i = 0; i < count; i++)
-            {           
+            {
                 obj = Instantiate(pool, transform) as GameObject;
 
                 obj.name += " "+i;
@@ -454,7 +464,7 @@ public class HudManager : MonoBehaviour
 
                 Color color = LootTypeColors[(int)pdx.GetLootDrop(pk).rarity];
 
-                bool register = PlayerPrefs.GetInt(Pokedex.Instance.GetKeyNamePlayerPrefs(pk)) > 1;
+                bool register = Pokedex.Instance.GetIntNamePlayerPrefs(pk) > 1;
 
                 PokedexContent pkC = GetDropListPool(dropListExample,true,pCount,transform);
 
@@ -498,8 +508,6 @@ public class HudManager : MonoBehaviour
             if(open)
             {
                 UpdateCurrentScene = CurrentScene.PokedexScene;
-                pokedexCompleteText.text    = "Complete: <b>"+pdx.GetNumberCompleteDex()+"</b> / <b>"+pdx.GetMaxIndex+"</b>";
-                pokedexShinyText.text       = "Shiny: <b>"+pdx.GetNumberCompleteShinyDex()+"</b> / <b>"+pdx.GetMaxIndex+"</b>";
 
                 pokedexContent.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
                     
@@ -523,6 +531,11 @@ public class HudManager : MonoBehaviour
         int             i   =   pk.id; 
 
         PokedexContent pkC  =   pokedexExamplePool[i-1].GetComponent<PokedexContent>(); 
+
+        // int male   = pdx.GetTotalCatchesGender(pk, Gender.Male,   true, true, true);  
+        // int female = pdx.GetTotalCatchesGender(pk, Gender.Female, true, true, true);
+
+        // pk.gender = female > male ? Gender.Female : Gender.Male;
 
         bool shiny  = pdx.GetTotalCatches(pk,onlyShiny: true) > 0;
 
@@ -555,24 +568,31 @@ public class HudManager : MonoBehaviour
 
     void UpdateAmountPokedex()
     {
+        if(!firstLoadPokedex)
+            FirstLoadPokedex();
+
+        pokedexCompleteText.text    = "Complete: <b>"+pdx.GetNumberCompleteDex()+"</b> / <b>"+pdx.GetMaxIndex+"</b>";
+        pokedexShinyText.text       = "Shiny: <b>"+pdx.GetNumberCompleteShinyDex()+"</b> / <b>"+pdx.GetMaxIndex+"</b>";
+
         int count = pdx.GetAllPokemons.Count;
         for (int p = 0; p < count; p++)
-        {
+        {   
             LootDrop        ld  =   pdx.GetAllPokemons[p];
-            LootScriptable  pk  =   ld.loot;           
-
+            LootScriptable  pk  =   ld.loot;
+                    
             PokedexContent pkC  =   pokedexExamplePool[pk.id-1].GetComponent<PokedexContent>();
-            pkC.UpdateAmount(pdx.GetTotalCatches(pk,true,form: true));    
+            pkC.UpdateAmount(pdx.GetTotalCatches(pk,true,form: true));   
         }
     }
 
     void FirstLoadPokedex()
     {
-        int pCount = pdx.GetMaxIndex;
-
-        GetDropListPool(pokedexExample,false,pCount,pokedexContent.transform);
         firstLoadPokedex = true;
-                    
+
+        int pCount = pdx.GetMaxIndex;
+        
+        GetDropListPool(pokedexExample,false,pCount,pokedexContent.transform); 
+                
         float size = (float)pCount/3;           
         pokedexContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 521 * (size));
                                            
@@ -590,10 +610,28 @@ public class HudManager : MonoBehaviour
         pokedexDetailMaleButton.onClick.AddListener(() => UpdatePokemonImagePokedexDetail(true));
         pokedexDetailFemaleButton.onClick.AddListener(() => UpdatePokemonImagePokedexDetail(false));
         pokedexDetailShinyButton.onClick.AddListener(() => ShinyTriggerPokedexDetail());
+
+        pokedexCompleteText.text    = "Complete: <b>"+pdx.GetNumberCompleteDex()+"</b> / <b>"+pdx.GetMaxIndex+"</b>";
+        pokedexShinyText.text       = "Shiny: <b>"+pdx.GetNumberCompleteShinyDex()+"</b> / <b>"+pdx.GetMaxIndex+"</b>";       
     }
 
     #region Pokedex Detail
     // ------------ Pokedex Detail-------------
+    Gender PokemonDetailGender()
+    {
+        if(pokedexDetailSelect == null)
+            return Gender.Male;
+
+        Gender gender = Gender.Unknown;
+
+        if(pokedexDetailSelect.genderRatio != GenderRatio.Genderless)
+            gender = pokedexDetailGenderTrigger ? Gender.Male : Gender.Female;
+
+        pokedexDetailSelect.gender = gender;
+
+        return gender;       
+    }
+
     public void OpenPokedexDetail(bool open=true)
     {
         pokedexDetailGo.SetActive(open);
@@ -603,25 +641,17 @@ public class HudManager : MonoBehaviour
 
     public void UpdatePokemonImagePokedexDetail(bool male)
     {
-        Gender gender = Gender.Unknown;
-
         if(pokedexDetailGenderTrigger != male)
-        {
             pokedexDetailGenderTrigger = male;
 
-            if(pokedexDetailSelect.genderRatio != GenderRatio.Genderless)
-                gender = male ? Gender.Male : Gender.Female;
-
-            pokedexDetailSelect.gender = gender;
-        }
+        Gender gender = PokemonDetailGender();
 
         bool shiny = pokedexDetailShinyTrigger;
-        
 
         if(pokedexDetailSelect.genderRatio != GenderRatio.Genderless)
             gender = male ? Gender.Male : Gender.Female;
 
-        int amount = PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pokedexDetailSelect,gender,shiny));
+        int amount = pdx.GetIntNamePlayerPrefs(pokedexDetailSelect,gender,shiny);
 
         if(shiny)
         {
@@ -636,22 +666,16 @@ public class HudManager : MonoBehaviour
         pokedexDetailAmountText.gameObject.SetActive(amount > 1);
         pokedexDetailAmountText.text = "x"+amount;
 
-        //evolution button
-        if(pdx.CanEvolved(pokedexDetailSelect))
-        {
-            pokedexDetailEvolveButton.gameObject.SetActive(true);
-            pokedexDetailEvolveButton.onClick.RemoveAllListeners();
-            pokedexDetailEvolveButton.onClick.AddListener(() => OpenEvolutionScene(pokedexDetailSelect));
-            pokedexDetailEvolveImage.sprite = pokedexDetailSelect.GetSpriteNextEvolution(gender,shiny);
-        }
-        else
-            pokedexDetailEvolveButton.gameObject.SetActive(false);
+        UpdatePokemonDetailCanEvolved();
+
+        UpdatePokemonDetailButtons();   
     }
 
     public void ShinyTriggerPokedexDetail()
     {
         pokedexDetailShinyTrigger = !pokedexDetailShinyTrigger;  
-        pokedexDetailSelect.shiny = pokedexDetailShinyTrigger;
+        pokedexDetailSelect.shiny = pokedexDetailShinyTrigger;      
+
         UpdatePokemonImagePokedexDetail(pokedexDetailGenderTrigger);
     }
 
@@ -659,8 +683,8 @@ public class HudManager : MonoBehaviour
     {
         pokedexDetailAlolanFormTrigger = !pokedexDetailAlolanFormTrigger;
 
-        LootScriptable pkSwitch = pdx.GetPokemon(pokedexDetailSelect.name,pokedexDetailAlolanFormTrigger ? Form.Normal : Form.Alolan);
-        LootScriptable pk = pdx.GetPokemon(pokedexDetailSelect.name,pokedexDetailAlolanFormTrigger ? Form.Alolan : Form.Normal);
+        LootScriptable pkSwitch = pdx.GetPokemon(pokedexDetailSelect.id,pokedexDetailAlolanFormTrigger ? Form.Normal : Form.Alolan);
+        LootScriptable pk       = pdx.GetPokemon(pokedexDetailSelect.id,pokedexDetailAlolanFormTrigger ? Form.Alolan : Form.Normal);
         
         pokedexDetailAlolanFormButton.GetComponent<Image>().sprite = pkSwitch.GetSprite(Gender.Male,pokedexDetailShinyTrigger);
 
@@ -676,26 +700,29 @@ public class HudManager : MonoBehaviour
         bool registered = pdx.GetPokemonRegistered(pk);
 
         if(!registered)
-            return;
+            return;      
 
         pokedexDetailSelect = pk;
 
         OpenPokedexDetail(true);
 
-        bool male   = PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk,Gender.Male))   > 0;  
-        bool female = PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk,Gender.Female)) > 0;
-        bool shiny  = pdx.GetTotalCatches(pk,onlyShiny: true) > 0;
-        bool alolan = pdx.GetTotalCatchesAlolanRegistered(pk) > 0;
-        int amount  = PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk));
+        bool male   = pdx.GetIntNamePlayerPrefs(pk, Gender.Male,   pokedexDetailShinyTrigger)   > 0;  
+        bool female = pdx.GetIntNamePlayerPrefs(pk, Gender.Female, pokedexDetailShinyTrigger) > 0;
 
-        if(pk.genderRatio == GenderRatio.OnlyMale   || 
-           pk.genderRatio == GenderRatio.OnlyFemale || 
-           pk.genderRatio == GenderRatio.Genderless)
-        {
-            male    = false;
-            female  = false;
-        }
-        
+        if(pk.genderRatio == GenderRatio.Genderless)
+            pokedexDetailGenderTrigger = true;
+        else
+        if(pk.gender == Gender.Male)
+            pokedexDetailGenderTrigger = true;
+        else
+            pokedexDetailGenderTrigger = false;
+
+        Gender gender = PokemonDetailGender();
+
+        bool shiny  = pdx.GetIntNamePlayerPrefs(pk, gender,        true) > 0;
+        bool alolan = pdx.GetIntNamePlayerPrefs(pk, gender,pokedexDetailShinyTrigger, Form.Alolan) > 0;
+        int amount  = pdx.GetIntNamePlayerPrefs(pk); 
+
         if(!shiny)
             pokedexDetailShinyTrigger = false;
 
@@ -714,9 +741,7 @@ public class HudManager : MonoBehaviour
         pokedexDetailGenderImage.enabled    = registered;
         pokedexDetailGenderImage.sprite     = genders[(int)pk.gender];   
 
-        pokedexDetailMaleButton.gameObject.SetActive(male);        
-        pokedexDetailFemaleButton.gameObject.SetActive(female);
-        pokedexDetailShinyButton.gameObject.SetActive(shiny);
+        UpdatePokemonDetailButtons();
 
         pokedexDetailAmountText.gameObject.SetActive(amount > 1);
         pokedexDetailAmountText.text = "x"+amount;
@@ -724,16 +749,52 @@ public class HudManager : MonoBehaviour
         if(alolan)
         {
             pokedexDetailAlolanFormButton.GetComponent<Image>().sprite = pdx.GetPokemon(pk.Name,pk.form == Form.Normal ? Form.Alolan : Form.Normal).GetSprite(pk.gender,pokedexDetailShinyTrigger);
-            pokedexDetailAlolanFormButton.gameObject.SetActive(alolan && PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pk,Gender.Female,pk.form == Form.Normal ? Form.Alolan : Form.Normal)) > 0);
+            pokedexDetailAlolanFormButton.gameObject.SetActive(alolan && pdx.GetIntNamePlayerPrefs(pk,Gender.Female,form: pk.form == Form.Normal ? Form.Alolan : Form.Normal) > 0);
         }
         else
             pokedexDetailAlolanFormButton.gameObject.SetActive(false);
 
+        UpdatePokemonDetailCanEvolved();
+    }
+
+    private void UpdatePokemonDetailButtons()
+    {
+        Gender gender = PokemonDetailGender();
+
+        bool m = false;
+        bool f = false;
+        bool s = false;
+
+        if(pokedexDetailSelect.genderRatio == GenderRatio.OnlyFemale)
+        {
+            f = true;
+        }
+        else
+        if(pokedexDetailSelect.genderRatio == GenderRatio.OnlyMale || pokedexDetailSelect.genderRatio == GenderRatio.Genderless)
+        {
+            m = true;
+        }
+        else
+        {
+            m   = pokedexDetailGenderTrigger ? false :     pdx.GetIntNamePlayerPrefs(pokedexDetailSelect, Gender.Male,   pokedexDetailShinyTrigger)    > 0;  
+            f   = pokedexDetailGenderTrigger ?             pdx.GetIntNamePlayerPrefs(pokedexDetailSelect, Gender.Female, pokedexDetailShinyTrigger)    > 0 : false;     
+        }
+
+        s   =   pdx.GetIntNamePlayerPrefs(pokedexDetailSelect, gender,        true)     > 0;
+
+        pokedexDetailMaleButton.gameObject.SetActive(m);        
+        pokedexDetailFemaleButton.gameObject.SetActive(f);
+        pokedexDetailShinyButton.gameObject.SetActive(s);
+    }
+
+    private void UpdatePokemonDetailCanEvolved()
+    {
         if(pdx.CanEvolved(pokedexDetailSelect))
         {
             pokedexDetailEvolveButton.gameObject.SetActive(true);
-            pokedexDetailEvolveButton.onClick.AddListener(() => OpenEvolutionScene(pk));
-            pokedexDetailEvolveImage.sprite = pk.GetSpriteNextEvolution(pk.gender, pokedexDetailShinyTrigger);
+            pokedexDetailEvolveButton.onClick.AddListener(() => OpenEvolutionScene(pokedexDetailSelect));
+            pokedexDetailEvolveImage.sprite = pokedexDetailSelect.GetSpriteNextEvolution(pokedexDetailSelect.gender, pokedexDetailShinyTrigger);
+            pokedexDetailEvolveImage.color  = pdx.GetPokemonRegistered(pokedexDetailSelect.nextEvolution) ? Color.white : Color.black;
         }
         else
             pokedexDetailEvolveButton.gameObject.SetActive(false);
@@ -771,13 +832,14 @@ public class HudManager : MonoBehaviour
         Sprite pE   = pk.GetSpriteNextEvolution(pk.gender,shiny);
 
         int needEvolved = pk.needAmountToEvolution;
-        int amount  = pdx.GetAmount(pokedexDetailSelect);
+        int amount      = pdx.GetIntNamePlayerPrefs(pokedexDetailSelect);
 
         evolutionSceneGo.SetActive(true);
         evolutionSceneEvolutionButton.gameObject.SetActive(true);
 
         evolutionSceneEvolutionButtonCurrentPokemonImage.sprite = p;
         evolutionSceneEvolutionButtonNextPokemonImage.sprite    = pE;
+        evolutionSceneEvolutionButtonNextPokemonImage.color     = pdx.GetPokemonRegistered(pkE) ? Color.white : Color.black;
         
         evolutionSceneAmountEvolutionButtonText.text = "x"+needEvolved;
 
@@ -793,7 +855,7 @@ public class HudManager : MonoBehaviour
     {
         pokemonEvolving = true;
 
-        evolutionScenePokemonImage.sprite   = pokedexDetailSelect.pokemon;
+       // evolutionScenePokemonImage.sprite   = pokedexDetailSelect.pokemon;
 
         string name = pokedexDetailShinyTrigger ? "<color=yellow>"+pokedexDetailSelect.Name.ToUpper()+"</color>" : pokedexDetailSelect.Name.ToUpper();
 
@@ -830,11 +892,6 @@ public class HudManager : MonoBehaviour
 
         Sprite pE   = pkE.GetSprite(pokedexDetailSelect.gender,shiny);
 
-        evolutionSceneCancelButton.gameObject.SetActive(true);
-         
-         if(pdx.CanEvolved(pokedexDetailSelect))
-            evolutionSceneEvolutionButton.gameObject.SetActive(true);
-
         Gender gender = Gender.Unknown;
         if(pkE.genderRatio != GenderRatio.Genderless)
             gender = pokedexDetailGenderTrigger ? Gender.Male : Gender.Female;
@@ -847,7 +904,13 @@ public class HudManager : MonoBehaviour
         evolutionScenePokemonImage.sprite   = pE;
         evolutionScenePanelText.text        = "Congratulations! Your "+Oldname+" evolved into "+Evname;
 
-        Invoke("NextListEvolutionScene",2.5f);
+        evolutionSceneCancelButton.gameObject.SetActive(true);
+         
+        evolutionSceneEvolutionButton.gameObject.SetActive(pdx.CanEvolved(pokedexDetailSelect));
+        evolutionSceneEvolutionButtonNextPokemonImage.color     = pdx.GetPokemonRegistered(pkE) ? Color.white : Color.black;
+
+        UpdateAmountPokedex();
+        UpdatePokedex(pkE);
     }
 
     void AnimEvolutionScene(bool start)
@@ -864,20 +927,22 @@ public class HudManager : MonoBehaviour
     {
         evolutionSceneGo.SetActive(false);
 
-        if(!pokedexDetailGo)
+        if(pokedexDetailGo.activeSelf == false)
         {
             DisablePokeballAndPokemonMainScreen(false);
             UpdateCurrentScene = CurrentScene.MainScene;
         }
         else
             {
-                int amount  = PlayerPrefs.GetInt(pdx.GetKeyNamePlayerPrefs(pokedexDetailSelect));
+                int amount  = pdx.GetIntNamePlayerPrefs(pokedexDetailSelect);
                 pokedexDetailAmountText.gameObject.SetActive(amount > 1);
                 pokedexDetailAmountText.text = "x"+amount;
                 UpdateCurrentScene = CurrentScene.DetailPokedexScene;
+
+                LoadPokemonDetail(pokedexDetailSelect);
             }
 
-        if(evolutionListPokemons.Count> 0)
+        if(evolutionListPokemons.Count >= 1)
             NextListEvolutionScene();
         else
         {
@@ -900,12 +965,85 @@ public class HudManager : MonoBehaviour
             return;
         }
 
-        pokemonEvolving = false;
+        if(!evolutionSceneGo.activeSelf)
+        {
+            pokemonEvolving = false;
 
-        LootScriptable pk = evolutionListPokemons[0];
+            LootScriptable pk = evolutionListPokemons[0];
 
-        if(OpenEvolutionScene(pk))
-            evolutionListPokemons.RemoveAt(0);
+            if(OpenEvolutionScene(pk))
+                evolutionListPokemons.RemoveAt(0); 
+        }           
+    }
+    #endregion
+
+    #region Bonus
+    public void ToolTipNewBonus(string text)
+    {
+        if(currentScene != CurrentScene.LootPokemonScene)
+            DisablePokeballAndPokemonMainScreen(true);
+    
+        if(BonusTooltipGo.activeSelf)
+            BonusTooltipText.text +="\n"+text;
+        else
+            BonusTooltipText.text = text;
+
+        BonusTooltipGo.SetActive(true);
+    }
+
+    public void CloseToolTipNewBonus()
+    {
+        if(currentScene == CurrentScene.MainScene)
+            DisablePokeballAndPokemonMainScreen(false);
+
+        BonusTooltipGo.SetActive(false);
+    }
+
+    public void ActiveLootAmount()
+    {
+        LootAmountGo.SetActive(true);
+        LootAmountText.text = "x"+PlayerPrefs.GetInt("LootNumber", 1);
+    }
+
+    public void LootAmountSumButton(bool sum=true)
+    {
+        int v = PlayerPrefs.GetInt("LootNumber", 1);
+
+        if(sum)
+            v++;
+        else
+            v--;
+
+        if(v > expM.MaxLootNumber)
+            v = 1;
+        if(v < 1)
+            v =  expM.MaxLootNumber;
+
+        PlayerPrefs.SetInt("LootNumber", v);
+
+        DropPokeball.Instance.LootNumber = v;
+
+        LootAmountText.text = "x"+v;
+    }
+
+    public void ActiveLootType()
+    {
+        LootTypeGo.SetActive(true);
+        LootTypeDropdown.value = PlayerPrefs.GetInt("LootType", 0); //0 = Normal
+    }
+
+    public void SaveDropdownLootType(int v)
+    {
+        if(v > 0)
+            v += 8;
+
+        PlayerPrefs.SetInt("LootType", v);
+
+        //Ban -> dragon, Ghost ,Dark,Steel fairy
+
+        DropPokeball.Instance.LootType = (LootType)v;
+
+        Debug.Log("Dropdown["+v+"] -> "+(LootType)v);
     }
 
     #endregion

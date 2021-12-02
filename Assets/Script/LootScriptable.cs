@@ -187,35 +187,36 @@ public class LootScriptable : ScriptableObject
         if(nextEvolution.genderRatio != GenderRatio.Genderless)
             switch (_gender)
             {
-                case Gender.Male:
+                default:
                     GenderMale = true;
                 break;
+
                 case Gender.Female:
                     GenderMale = false;
                 break;
              }   
 
-        if (GenderMale == true && _shiny==false || GenderMale == false && nextEvolution.sprites.Length < 3 && _shiny == false || GenderMale == null && _shiny == false)
+        if (GenderMale == true && _shiny==false | GenderMale == false && nextEvolution.sprites.Length < 3 && _shiny == false | GenderMale == null && _shiny == false)
         {
-            //Debug.Log("Male sprite");
+            Debug.Log("Male sprite");
            return nextEvolution.sprites[0];
         }
         
-        if (GenderMale == true && _shiny == true || GenderMale == null && _shiny == true || GenderMale == false && nextEvolution.sprites.Length < 3 && _shiny == true)
+        if (GenderMale == true && _shiny == true | GenderMale == null && _shiny == true | GenderMale == false && nextEvolution.sprites.Length < 3 && _shiny == true)
         {
-            //Debug.Log("Shiny Male sprite");
+            Debug.Log("Shiny Male sprite");
             return nextEvolution.sprites[1];
         }
         
         if (GenderMale == false && nextEvolution.sprites.Length >= 3 && _shiny == false)
         {
-            //Debug.Log(" Female sprite");
+            Debug.Log(" Female sprite");
             return nextEvolution.sprites[2];
         }
        
         if (GenderMale == false && nextEvolution.sprites.Length >= 3 && _shiny == true)
         {
-            //Debug.Log("Shiny Female sprite");
+            Debug.Log("Shiny Female sprite");
             return nextEvolution.sprites[3];
         }
 
