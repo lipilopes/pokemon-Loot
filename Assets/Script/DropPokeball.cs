@@ -11,7 +11,9 @@ public enum LootType
     OnlyShiny,
 
     OnlyBasicEvolution,
+    OnlyBasicOrFirstEvolution,
     OnlyFirstEvolution,
+    OnlyFirstOrSecondEvolution,
     OnlySecondEvolution,
 
     OnlyNormal,

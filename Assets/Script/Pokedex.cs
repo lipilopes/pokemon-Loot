@@ -376,15 +376,19 @@ public class Pokedex : MonoBehaviour
         return pkE;
     }
 
+    #region Complete Dex
     public int GetNumberCompleteDex()
     {
+        if(!countMax)
+            CountMaxIndex();
+
         int count   = pokemons.Count;
 
         if(PlayerPrefs.GetInt("CompleteDex") == 1)
             return GetMaxIndex;
 
         int r = 0;
-        int loot = GetTotalCatches(pokemons[0].loot,true);
+        int loot = 0;
         string name = "";
 
         for (int i = 0; i < count; i++)
@@ -396,7 +400,7 @@ public class Pokedex : MonoBehaviour
                 if(loot > 0)
                     r++; 
 
-                loot = GetTotalCatches(pk,true);
+                loot = GetTotalCatches(pk,true,form: true);
                 name = pk.Name;               
             }
             else
@@ -405,10 +409,20 @@ public class Pokedex : MonoBehaviour
             }                     
         }  
 
-        if(r == GetMaxIndex)
+        if(loot > 0)
+            r++; 
+
+        if(r == GetMaxIndexDrop && PlayerPrefs.GetInt("MewAppeared",0) == 0)
         {
-            PlayerPrefs.SetInt("CompleteDex", 1); 
+            //Gift mew + Enable new bonus
+            ExpLevelManager.Instance.Grifts(GriftsBonus.MewAppeared);
+        }
+
+        if(r == GetMaxIndex)
+        {     
+            PlayerPrefs.SetInt("CompleteDex", 1);
             Debug.LogError("DEX COMPLETs"); 
+            ExpLevelManager.Instance.Grifts(GriftsBonus.CompletePokedexKanto);
         }
 
         return r;
@@ -457,6 +471,7 @@ public class Pokedex : MonoBehaviour
 
         return false;
     }
+    #endregion
 
     public bool GetPokemonRegistered(LootScriptable pk)
     {
