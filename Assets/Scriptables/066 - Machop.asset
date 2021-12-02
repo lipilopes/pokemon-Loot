@@ -28,4 +28,4 @@ MonoBehaviour:
   evolution: 0
   form: 0
   nextEvolution: {fileID: 11400000, guid: 694f49b2e2571654ca918589a6646267, type: 2}
-  needAmountToEvolution: 4
+  needAmountToEvolution: 3

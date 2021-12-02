@@ -27,5 +27,5 @@ MonoBehaviour:
   shiny: 0
   evolution: 1
   form: 0
-  nextEvolution: {fileID: 0}
-  needAmountToEvolution: 4
+  nextEvolution: {fileID: 11400000, guid: 85da271cd31a5ad488c4ccc10d0d2a51, type: 2}
+  needAmountToEvolution: 5
