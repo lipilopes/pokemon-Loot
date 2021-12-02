@@ -473,10 +473,10 @@ public class Pokedex : MonoBehaviour
     }
     #endregion
 
+    #region Get Pokemon's PlayerPrefs
     public bool GetPokemonRegistered(LootScriptable pk)
     {
-        bool shiny = pk.shiny;
-        return GetTotalCatches(pk,onlyShiny: shiny) > 0;
+        return GetTotalCatches(pk,true) > 0;
     }
 
     public int GetTotalCatches(LootScriptable pk,bool shiny = false,bool onlyShiny=false,bool form =false)
@@ -484,18 +484,18 @@ public class Pokedex : MonoBehaviour
         int r = 0;
         
         if(!onlyShiny)
-            r += PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Male,false))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,false))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Unknown,false));
+            r += GetIntNamePlayerPrefs(pk,Gender.Male,false)+GetIntNamePlayerPrefs(pk,Gender.Female,false)+GetIntNamePlayerPrefs(pk,Gender.Unknown,false);
 
         if(shiny || onlyShiny)
-            r += PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Male,true))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,true))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Unknown,true));
+            r += GetIntNamePlayerPrefs(pk,Gender.Male,true)+GetIntNamePlayerPrefs(pk,Gender.Female,true)+GetIntNamePlayerPrefs(pk,Gender.Unknown,true);
 
         if(form)
         {
             if(!onlyShiny)
-                r += PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Male,Form.Alolan,false))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,Form.Alolan,false))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Unknown,Form.Alolan,false));
+                r += GetIntNamePlayerPrefs(pk,Gender.Male,false,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Female,false,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Unknown,false,Form.Alolan);
 
             if(shiny || onlyShiny)
-                r+= PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Male,Form.Alolan,true))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,Form.Alolan,true))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Unknown,Form.Alolan,true));
+                r+= GetIntNamePlayerPrefs(pk,Gender.Male,true,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Female,true,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Unknown,true,Form.Alolan);
         }
 
         return r;
@@ -506,112 +506,62 @@ public class Pokedex : MonoBehaviour
         int r = 0;
         
         if(!onlyShiny)
-            r += PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Male,Form.Alolan,false))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,Form.Alolan,false))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Unknown,Form.Alolan,false));
+            r += GetIntNamePlayerPrefs(pk,gender,false);
 
         if(shiny || onlyShiny)
-            r += PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Male,Form.Alolan,true))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,Form.Alolan,true))+PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Unknown,Form.Alolan,true));
+            r += GetIntNamePlayerPrefs(pk,gender,true);
+
+        if(form)
+        {
+            if(!onlyShiny)
+                r += GetIntNamePlayerPrefs(pk,gender,false,Form.Alolan);
+
+            if(shiny || onlyShiny)
+                r+= GetIntNamePlayerPrefs(pk,gender,true,Form.Alolan);
+        }
 
         return r;
     }
 
-    public int GetAmount(LootScriptable pk)
+    public int GetTotalCatchesAlolanRegistered(LootScriptable pk,bool shiny = false,bool onlyShiny=false)
     {
-        return PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk));
+        int r = 0;
+        
+        if(!onlyShiny)
+            r += GetIntNamePlayerPrefs(pk,Gender.Male,false,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Female,false,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Unknown,false,Form.Alolan);
+
+        if(shiny || onlyShiny)
+            r += GetIntNamePlayerPrefs(pk,Gender.Male,true,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Female,true,Form.Alolan)+GetIntNamePlayerPrefs(pk,Gender.Unknown,true,Form.Alolan);
+
+        return r;
     }
 
-    public string GetKeyNamePlayerPrefs(LootScriptable pk)
+    public string GetKeyNamePlayerPrefs(LootScriptable pk,Gender? gender = null,bool? shiny= null,Form? form = null)
     {
-        string form   = (pk.form   != Form.Normal ? pk.form+"_" : "");
+        if (gender == null)
+        {
+            if(pk.genderRatio != GenderRatio.Genderless)
+                gender = pk.gender == Gender.Male ?  Gender.Male  :  Gender.Female;
+            else
+                gender = Gender.Unknown;
+        }
+        
+        if (form == null)
+            form = Form.Normal;
+        
+        if (shiny == null)
+            shiny = pk.shiny;
 
-        return "#"+pk.id+"_"+form+pk.gender+"_"+pk.shiny;
+        string f   = (form   != Form.Normal ? pk.form+"_" : "");
+
+        string key = "#"+pk.id+"_"+f+gender+"_"+shiny;
+
+        return key;
     }
 
-    public string GetKeyNamePlayerPrefs(LootScriptable pk,Gender gender)
+    public int GetIntNamePlayerPrefs(LootScriptable pk,Gender? gender = null,bool? shiny= null,Form? form = null)
     {
-        string form   = (pk.form   != Form.Normal ? pk.form+"_" : "");
-
-        return "#"+pk.id+"_"+form+gender+"_"+pk.shiny;
+        return PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,gender,shiny,form));
     }
-
-    public string GetKeyNamePlayerPrefs(LootScriptable pk,Gender gender,Form form)
-    {
-        string f   = (form   != Form.Normal ? form+"_" : "");
-
-        return "#"+pk.id+"_"+f+gender+"_"+pk.shiny;
-    }
-
-    public string GetKeyNamePlayerPrefs(LootScriptable pk,bool shiny)
-    {
-        string form   = (pk.form   != Form.Normal ? pk.form+"_" : "");
-
-        return "#"+pk.id+"_"+form+pk.gender+"_"+shiny;
-    }
-
-    public string GetKeyNamePlayerPrefs(LootScriptable pk,Gender gender,bool shiny)
-    {
-        string form   = (pk.form   != Form.Normal ? pk.form+"_" : "");
-
-        return "#"+pk.id+"_"+form+gender+"_"+shiny;
-    }
-
-    public string GetKeyNamePlayerPrefs(LootScriptable pk,Gender gender,Form form,bool shiny)
-    {
-        string f   = (form   != Form.Normal ? form+"_" : "");
-
-        return "#"+pk.id+"_"+f+gender+"_"+shiny;
-    }
-
-    void GetPokedexStatus()
-    {
-        int count               = pokemons.Count;
-        float registered        = 0;
-        float shinyRegistered   = 0;
-
-        float C=0,R=0,E=0,L=0,S=0;
-
-        if(PlayerPrefs.GetInt("TotalLoot") > 0)
-            for (int i = 0; i < count; i++)
-            {
-                LootScriptable pk   = pokemons[i].loot;
-                int maleLoot        = PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk),0);
-                int shinyMaleLoot   = PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,true),0);
-                int femaleLoot      = 0;
-                int shinyFemaleLoot = 0;
-                int loots           = maleLoot + shinyMaleLoot;          
-
-                if(pk.genderRatio != GenderRatio.OnlyMale && pk.genderRatio != GenderRatio.Genderless)
-                {
-                    femaleLoot  = PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female));
-                    loots       += femaleLoot;
-
-                    shinyFemaleLoot = PlayerPrefs.GetInt(GetKeyNamePlayerPrefs(pk,Gender.Female,true));
-                    loots           += shinyFemaleLoot;
-                }
-
-                if(pk.shiny) S+= shinyFemaleLoot+shinyMaleLoot;
-
-                if(pokemons[i].rarity == DropRarity.Common) C+=loots;
-                if(pokemons[i].rarity == DropRarity.Rare) R+=loots;
-                if(pokemons[i].rarity == DropRarity.Epic) E+=loots;
-                if(pokemons[i].rarity == DropRarity.Legendary) L+=loots; 
-
-                if(loots > 0)//GetTotalCatches
-                {
-                    registered++;
-                    Debug.Log(pk.Name+"["+pokemons[i].rarity+"] <color=blue>♂["+maleLoot+" / <color=yellow><b>"+shinyMaleLoot+"</b></color>]</color> <color=magenta>♀["+femaleLoot+" / <color=yellow><b>"+shinyFemaleLoot+"</b></color>]</color> - "+loots);
-                
-                    shinyRegistered += shinyFemaleLoot + shinyMaleLoot;
-                }
-                else
-                    Debug.LogError(pk.Name+" ["+pokemons[i].rarity+"] Not Found");
-            }
-
-        int total = PlayerPrefs.GetInt("TotalLoot",0);
-        Debug.LogWarning("Common ["+((C/total)*100)+"%] "+C+"/"+total);
-        Debug.LogWarning("Rare ["+((R/total)*100)+"%] "+R+"/"+total);
-        Debug.LogWarning("Epic ["+((E/total)*100)+"%] "+E+"/"+total);
-        Debug.LogWarning("Legendary ["+((L/total)*100)+"%] "+L+"/"+total);
-        Debug.LogWarning("Shiny ["+((S/total)*100)+"%] "+S+"/"+total);
-        Debug.LogWarning("Pokedex["+((registered/count)*100).ToString("F2")+"%] "+registered+" of "+count+" - <color=yellow>"+shinyRegistered+"</color>/"+total);
-    }
+    #endregion
 }
