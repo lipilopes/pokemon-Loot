@@ -1,15 +1,18 @@
 bonus shiny -> Max 25%
     *Default                1%
-    *SkipAnim == fals       +4%
+    *SkipAnim == false      +4%
     *Catch      x1/75 ->    +0.2/15% [limited]
     *Complete Dex           +5%
 
 PlayerPrefs Keys
-    *pokemons           [int]   ->  #ID_Gender_Shiny - "#0_Male_true" / "#ID_Form_Gender_Shiny - "#19_Alolan_Male_false"
-    *Last pokemon loot  [int]   ->  "LastPokemonLoot"
-    *Total Loots        [int]   ->  "TotalLoot"
-    *Dex Complet?       [int]   ->  "CompleteDex"
-    *Toggle Skip Anim   [int]   ->  "SkipAnim" 
-    *Effect Vol         [Float] ->  "fxVol"
-    *Music Vol          [Float] ->  "musicVol"
+    *pokemons               [int]   ->  #ID_Gender_Shiny - "#0_Male_true" / "#ID_Form_Gender_Shiny - "#19_Alolan_Male_false"
+    *Last pokemon loot      [int]   ->  "LastPokemonLoot"
+    *Total Loots            [int]   ->  "TotalLoot"
+    *Dex Complet?           [int]   ->  "CompleteDex"
+    *Toggle Skip Anim       [int]   ->  "SkipAnim" 
+    *Effect Vol             [Float] ->  "fxVol"
+    *Music Vol              [Float] ->  "musicVol"
+    *LootNumber             [int]   ->  "LootNumber"
+    *LootType               [int]   ->  (LootType)"LootType"
+    *CompletePokedexKanto   [int]   ->  "CompletePokedexKanto" 0 or 1
 
