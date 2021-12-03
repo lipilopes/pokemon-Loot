@@ -57,7 +57,7 @@ Shiny[2540]) = 4235 or Level 99.
  | ------------ | ------------ |
  | 01 - 30  |  Only Basic Stage. |
  | 31 - 49  | Only Basic or 1 Stages. |
- |   +50    | 1. All Stages and Select.<br />2. Pokemon Type. |
+ |   +50    | 1. All Stages.<br />2. Select Pokemon Type. |
 
  ### Grifts
  | Quest | Bonus |
