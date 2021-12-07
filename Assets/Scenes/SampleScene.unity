@@ -206,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906800}
+        m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: OpenPokedex
         m_Mode: 6
         m_Arguments:
@@ -937,8 +937,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906800}
+        m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: OpenPokedexDetail
         m_Mode: 6
         m_Arguments:
@@ -3520,8 +3520,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906800}
+        m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: UpdateFormPokemonImagePokedexDetail
         m_Mode: 1
         m_Arguments:
@@ -6622,6 +6622,8 @@ GameObject:
   - component: {fileID: 679906798}
   - component: {fileID: 679906797}
   - component: {fileID: 679906799}
+  - component: {fileID: 679906801}
+  - component: {fileID: 679906800}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -6663,24 +6665,6 @@ MonoBehaviour:
   dropListDetailEpic: {fileID: 2109456487}
   dropListDetailLegendary: {fileID: 1811041586}
   dropListDetailShiny: {fileID: 242793864}
-  pokedexGo: {fileID: 612730051}
-  pokedexContent: {fileID: 1685568903}
-  pokedexExample: {fileID: 1668240280}
-  pokedexCompleteText: {fileID: 318258192}
-  pokedexShinyText: {fileID: 935728018}
-  pokedexDetailGo: {fileID: 50720488}
-  pokedexDetailNameText: {fileID: 975911370}
-  pokedexDetailDescriptionText: {fileID: 663574670}
-  pokedexDetailAmountText: {fileID: 1598204469}
-  pokedexDetailBgImage: {fileID: 1615650509}
-  pokedexDetailPokemonImage: {fileID: 993842194}
-  pokedexDetailGenderImage: {fileID: 1535165597}
-  pokedexDetailEvolveImage: {fileID: 1602606837}
-  pokedexDetailAlolanFormButton: {fileID: 347768360}
-  pokedexDetailMaleButton: {fileID: 570737963}
-  pokedexDetailFemaleButton: {fileID: 1282037709}
-  pokedexDetailShinyButton: {fileID: 1146561649}
-  pokedexDetailEvolveButton: {fileID: 1628576659}
   evolutionSceneGo: {fileID: 1838552615}
   evolutionScenePokemonImage: {fileID: 1060714071}
   evolutionScenePanelText: {fileID: 786645454}
@@ -6768,6 +6752,42 @@ MonoBehaviour:
   maxExp: 99999
   expTotal: 0
   maxLootNumber: 1
+--- !u!114 &679906800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679906796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a19b4b9cf5068642bad40a9faa491d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokedexGo: {fileID: 612730051}
+  pokedexContent: {fileID: 1685568903}
+  pokedexExample: {fileID: 1668240280}
+  pokedexCompleteText: {fileID: 318258192}
+  pokedexShinyText: {fileID: 935728018}
+  pokedexExamplePool:
+  - {fileID: 1668240280}
+  pokedexDetailGo: {fileID: 50720488}
+  pokedexDetailNameText: {fileID: 975911370}
+  pokedexDetailDescriptionText: {fileID: 663574670}
+  pokedexDetailAmountText: {fileID: 1598204469}
+  pokedexDetailBgImage: {fileID: 1615650509}
+  pokedexDetailPokemonImage: {fileID: 993842194}
+  pokedexDetailGenderImage: {fileID: 1535165597}
+  pokedexDetailEvolveImage: {fileID: 1602606837}
+  pokedexDetailAlolanFormButton: {fileID: 347768360}
+  pokedexDetailMaleButton: {fileID: 570737963}
+  pokedexDetailFemaleButton: {fileID: 1282037709}
+  pokedexDetailShinyButton: {fileID: 1146561649}
+  pokedexDetailEvolveButton: {fileID: 1628576659}
+  pokedexDetailSelect: {fileID: 0}
+  pokedexDetailShinyTrigger: 0
+  pokedexDetailGenderTrigger: 0
+  pokedexDetailAlolanFormTrigger: 0
 --- !u!1 &690590220
 GameObject:
   m_ObjectHideFlags: 0
@@ -17361,8 +17381,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906800}
+        m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: OpenPokedex
         m_Mode: 6
         m_Arguments:
