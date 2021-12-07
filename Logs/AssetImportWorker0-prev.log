@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.22f1 (e1a7f79fd887) revision 14788599'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Enterprise 2015 LTSB; OS build 10240.19119; Version ; 64bit' Language: 'pt' Physical Memory: 4085 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+E:\Program Files\2020.3.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/Fellipe L/Projetos/Projetos UNITY/LootBox
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60850
+Successfully changed project path to: E:/Fellipe L/Projetos/Projetos UNITY/LootBox
+E:/Fellipe L/Projetos/Projetos UNITY/LootBox
+Using Asset Import Pipeline V2.

@@ -87,15 +87,6 @@ public class HudManager : MonoBehaviour
     [SerializeField] Image              tooltipExpLevelNewImage;//white
     [SerializeField] Image              tooltipExpLevelTotalImage;//red
     [SerializeField] TextMeshProUGUI    tooltipExpLevelText;
-    [Header("Config")]
-    [SerializeField] AudioMixer         audioMixer;
-    [SerializeField] GameObject         configGo;
-    [SerializeField] TextMeshProUGUI    configResetSaveText;
-    [SerializeField] Button             configButton;
-    [SerializeField] Slider             configFxSlider;
-    [SerializeField] Slider             configMusicSlider;
-    int                                 countToReset = 0;
-    WaitForSeconds                      waitResetToReset = new WaitForSeconds(3);
     [Header("Bonus")]
     [Tooltip("When SkipAnim is deactivated it gains a glow bonus"),Range(0,1)]
     [SerializeField] float              skipAnimDisableBonusShiny   = 0.04f;
@@ -157,11 +148,7 @@ public class HudManager : MonoBehaviour
             Debug.LogWarning("LastPk "+pkId);
             DisableMainScreen();
             UpdateScene(pdx.GetPokemonLoot(pkId),saveInPokedex: false);
-        }
-
-        //Slider
-        configFxSlider.value    = PlayerPrefs.GetFloat("fxVol",3);
-        configMusicSlider.value = PlayerPrefs.GetFloat("musicVol",3);     
+        }    
     }
 
     public void ResetMainPokemon()
@@ -793,80 +780,4 @@ public class HudManager : MonoBehaviour
             tooltipExpLevelGo.GetComponent<PlayAudio>().PlayAudioClip(3,false);
     }
     #endregion
-
-    #region Config 
-    public void ConfigButton(bool open)
-    {
-        DisablePokeballAndPokemonMainScreen(open);
-        configGo.SetActive(open);
-
-        if(open)
-        {
-            countToReset = 0;
-            ResetSave(false);
-        }    
-        else
-        {
-            StopCoroutine(IResetCountToReset());
-        }   
-    }
-
-    public void ResetSave(bool sum =true)
-    {
-        if(sum)
-            countToReset++;
-
-        switch (countToReset)
-        {
-            default:
-                configResetSaveText.text = "RESET SAVE";
-            break;
-
-            case 1:
-                configResetSaveText.text = "<b>Click Again\nTo RESET</b>";
-                StartCoroutine(IResetCountToReset());
-            break;
-
-            case 2:
-                PlayerPrefs.DeleteAll();
-                #if UNITY_EDITOR
-                    EditorApplication.isPlaying = false;
-                #else
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                #endif       
-            break;
-        }      
-    }
-    
-    IEnumerator IResetCountToReset()
-    {
-        yield return waitResetToReset;
-
-        countToReset = 0;
-        ResetSave(false);
-    }
-
-    public void SetFxVolume(float value)
-    {
-        
-        if(value == -25)
-            value = -80;
-        
-        audioMixer.SetFloat("fxVol",value);
-
-        PlayerPrefs.SetFloat("fxVol",value);
-    }
-
-    public void SetMusicVolume(float value)
-    {
-        
-        if(value == -25)
-            value = -80; 
-
-        audioMixer.SetFloat("musicVol",value);
-
-        PlayerPrefs.SetFloat("musicVol",value);
-    }
-    #endregion
-
 }

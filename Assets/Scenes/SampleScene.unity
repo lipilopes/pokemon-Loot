@@ -4770,8 +4770,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906801}
+        m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: ResetSave
         m_Mode: 6
         m_Arguments:
@@ -6678,12 +6678,6 @@ MonoBehaviour:
   tooltipExpLevelNewImage: {fileID: 313647560}
   tooltipExpLevelTotalImage: {fileID: 1998131536}
   tooltipExpLevelText: {fileID: 861434641}
-  audioMixer: {fileID: 24100000, guid: 09857c66a9a187f40b66a0fc9792d6a3, type: 2}
-  configGo: {fileID: 1970621348}
-  configResetSaveText: {fileID: 787122359}
-  configButton: {fileID: 2134576288}
-  configFxSlider: {fileID: 1742831101}
-  configMusicSlider: {fileID: 736867923}
   skipAnimDisableBonusShiny: 0.04
   LootAmountGo: {fileID: 1872524497}
   LootAmountText: {fileID: 27000877}
@@ -6788,6 +6782,24 @@ MonoBehaviour:
   pokedexDetailShinyTrigger: 0
   pokedexDetailGenderTrigger: 0
   pokedexDetailAlolanFormTrigger: 0
+--- !u!114 &679906801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679906796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d2a1188192c6849af7697e09cb9aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 09857c66a9a187f40b66a0fc9792d6a3, type: 2}
+  configGo: {fileID: 1970621348}
+  configResetSaveText: {fileID: 787122359}
+  configButton: {fileID: 2134576288}
+  configFxSlider: {fileID: 1742831101}
+  configMusicSlider: {fileID: 736867923}
 --- !u!1 &690590220
 GameObject:
   m_ObjectHideFlags: 0
@@ -7153,10 +7165,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 0
+      - m_Target: {fileID: 736867924}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayAudioClip
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7165,10 +7177,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 736867924}
-        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
-        m_MethodName: PlayAudioClip
-        m_Mode: 3
+      - m_Target: {fileID: 679906801}
+        m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10797,8 +10809,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906801}
+        m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: ConfigButton
         m_Mode: 6
         m_Arguments:
@@ -18193,10 +18205,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
-        m_MethodName: SetFxVolume
-        m_Mode: 0
+      - m_Target: {fileID: 1742831102}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayAudioClip
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18205,10 +18217,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1742831102}
-        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
-        m_MethodName: PlayAudioClip
-        m_Mode: 3
+      - m_Target: {fileID: 679906801}
+        m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
+        m_MethodName: SetFxVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21769,8 +21781,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906797}
-        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+      - m_Target: {fileID: 679906801}
+        m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: ConfigButton
         m_Mode: 6
         m_Arguments:
