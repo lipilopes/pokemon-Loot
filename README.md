@@ -38,6 +38,32 @@
  > Max exp drop -> (Normal[1695]+
 Shiny[2540]) = 4235 or Level 99.
 
+# Exp Level Bonus -> ExpLevelManager.cs
+### Loot Amount
+ | Level | Loot Amount  |
+ | ------------ | ------------ |
+ | 01 - 10  | x1 |
+ | 11 - 20  | x2 |
+ | 21 - 30  | x3 |
+ | 31 - 40  | x4 |
+ | 41 - 50  | x5 |
+ | 51 - 60  | x6 |
+ | 61 - 70  | x7 |
+ | 71 - 80  | x8 |
+ | 81 - 99  | x9 |
+ | 99       | x10 |
+ ### Drop
+ | Level | Drop |
+ | ------------ | ------------ |
+ | 01 - 30  |  Only Basic Stage. |
+ | 31 - 49  | Only Basic or 1 Stages. |
+ |   +50    | 1. All Stages.<br />2. Select Pokemon Type. |
+
+ ### Grifts
+ | Quest | Bonus |
+ | ------------ | ------------ |
+ | Complete Kanto's Dex  |  1. Can Loot Mew.<br />2. Can Loot MewTwo.<br />3. Loot x1 Mew. |
+
 ### PlayerPrefs Keys
  | Key | Example | type | Detail |
  | ------------ | ------------ | ------------ | ------------ |
@@ -47,7 +73,10 @@ Shiny[2540]) = 4235 or Level 99.
  | "CompleteDex" | "CompleteDex" | int (0 or 1) | ... |
  | "SkipAnim" | "SkipAnim" | int (0 or 1) | Toggle Skip Anim |
  | "fxVol" | "fxVol" | float (-20 to 20) | Effect Vol |
- | "musicVol" | "fxVol" | float (-20 to 20) | Music Vol |
+ | "musicVol" | "musicVol" | float (-20 to 20) | Music Vol |
+ | "LootNumber" | "LootNumber" | int (1 to 10) | Player Count Loot |
+ | "LootType" | (LootType)"LootType" | int | Current Type Loot |
+ | "CompletePokedexKanto" | "CompletePokedexKanto" | int (0 or 1) | To Grifts |
  
 # Game Scenes
 |  Scenes       |  Caption |
