@@ -17,13 +17,21 @@ public class HudConfig : MonoBehaviour
     [SerializeField] Button             configButton;
     [SerializeField] Slider             configFxSlider;
     [SerializeField] Slider             configMusicSlider;
+    [SerializeField] TextMeshProUGUI    configVersionText;
     int                                 countToReset = 0;
     WaitForSeconds                      waitResetToReset = new WaitForSeconds(3);
 
-    void Start() 
-    {   
+    private void Start() 
+    {
         configFxSlider.value    = PlayerPrefs.GetFloat("fxVol",3);
-        configMusicSlider.value = PlayerPrefs.GetFloat("musicVol",3);          
+        configMusicSlider.value = PlayerPrefs.GetFloat("musicVol",3);
+    }
+
+    private void OnEnable()
+    {
+        configVersionText.text  = "Version: <b>"+Application.version+"</b>";
+
+       
     }
 
     public void ConfigButton(bool open)
@@ -34,7 +42,7 @@ public class HudConfig : MonoBehaviour
         if(open)
         {
             countToReset = 0;
-            ResetSave(false);
+            ResetSave(false);          
         }    
         else
         {
