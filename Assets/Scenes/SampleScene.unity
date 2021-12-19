@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906800}
+      - m_Target: {fileID: 401480871}
         m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: OpenPokedex
         m_Mode: 6
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906800}
+      - m_Target: {fileID: 401480871}
         m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: OpenPokedexDetail
         m_Mode: 6
@@ -3520,7 +3520,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906800}
+      - m_Target: {fileID: 401480871}
         m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: UpdateFormPokemonImagePokedexDetail
         m_Mode: 1
@@ -3999,6 +3999,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401269758}
   m_CullTransparentMesh: 1
+--- !u!1 &401480869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401480874}
+  - component: {fileID: 401480873}
+  - component: {fileID: 401480872}
+  - component: {fileID: 401480871}
+  - component: {fileID: 401480870}
+  m_Layer: 0
+  m_Name: Hud
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &401480870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401480869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12af65aea811a744991c5edab89fe5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipPokedexAnim: {fileID: 303915809}
+  tooltipPokedexPokemonImage: {fileID: 1716191525}
+  tooltipPokedexText: {fileID: 1721223418}
+  tooltipPokedexGenderImage: {fileID: 690590222}
+  tooltipPokedexActive: 0
+  tooltipPokedexCanActive: 1
+  tooltipPokedexLine: []
+--- !u!114 &401480871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401480869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a19b4b9cf5068642bad40a9faa491d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokedexGo: {fileID: 612730051}
+  pokedexContent: {fileID: 1685568903}
+  pokedexExample: {fileID: 1668240280}
+  pokedexCompleteText: {fileID: 318258192}
+  pokedexShinyText: {fileID: 935728018}
+  pokedexExamplePool:
+  - {fileID: 1668240280}
+  pokedexDetailGo: {fileID: 50720488}
+  pokedexDetailNameText: {fileID: 975911370}
+  pokedexDetailDescriptionText: {fileID: 663574670}
+  pokedexDetailAmountText: {fileID: 1598204469}
+  pokedexDetailBgImage: {fileID: 1615650509}
+  pokedexDetailPokemonImage: {fileID: 993842194}
+  pokedexDetailGenderImage: {fileID: 1535165597}
+  pokedexDetailEvolveImage: {fileID: 1602606837}
+  pokedexDetailAlolanFormButton: {fileID: 347768360}
+  pokedexDetailMaleButton: {fileID: 570737963}
+  pokedexDetailFemaleButton: {fileID: 1282037709}
+  pokedexDetailShinyButton: {fileID: 1146561649}
+  pokedexDetailEvolveButton: {fileID: 1628576659}
+  pokedexDetailSelect: {fileID: 0}
+  pokedexDetailShinyTrigger: 0
+  pokedexDetailGenderTrigger: 0
+  pokedexDetailAlolanFormTrigger: 0
+--- !u!114 &401480872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401480869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d2a1188192c6849af7697e09cb9aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 09857c66a9a187f40b66a0fc9792d6a3, type: 2}
+  configGo: {fileID: 1970621348}
+  configResetSaveText: {fileID: 787122359}
+  configButton: {fileID: 2134576288}
+  configFxSlider: {fileID: 1742831101}
+  configMusicSlider: {fileID: 736867923}
+  configVersionText: {fileID: 1877112479}
+--- !u!114 &401480873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401480869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e59f77f22ae74a4cb197236d1805889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipExpLevelGo: {fileID: 292038024}
+  tooltipExpLevelAnim: {fileID: 292038029}
+  tooltipExpLevelNewImage: {fileID: 313647560}
+  tooltipExpLevelTotalImage: {fileID: 1998131536}
+  tooltipExpLevelText: {fileID: 861434641}
+--- !u!4 &401480874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401480869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &432799909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4895,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906801}
+      - m_Target: {fileID: 401480872}
         m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: ResetSave
         m_Mode: 6
@@ -4849,9 +4974,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1711158852}
   m_Father: {fileID: 1055227392}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -6371,7 +6497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -82.39992}
+  m_AnchoredPosition: {x: 0, y: -82.3999}
   m_SizeDelta: {x: 0, y: -164.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667852056
@@ -6622,9 +6748,7 @@ GameObject:
   - component: {fileID: 679906798}
   - component: {fileID: 679906797}
   - component: {fileID: 679906799}
-  - component: {fileID: 679906801}
   - component: {fileID: 679906800}
-  - component: {fileID: 679906802}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -6653,11 +6777,6 @@ MonoBehaviour:
   LootCountText: {fileID: 652551466}
   caughtButton: {fileID: 550985393}
   mainBackgroundImage: {fileID: 1901656382}
-  tooltipPokedexAnim: {fileID: 303915809}
-  tooltipPokedexPokemonImage: {fileID: 1716191525}
-  tooltipPokedexText: {fileID: 1721223418}
-  tooltipPokedexGenderImage: {fileID: 690590222}
-  tooltipPokedexCanActive: 1
   dropListGo: {fileID: 1990768811}
   dropListContent: {fileID: 48168382}
   dropListExample: {fileID: 1976231778}
@@ -6723,7 +6842,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &679906799
 MonoBehaviour:
@@ -6751,69 +6870,518 @@ MonoBehaviour:
   m_GameObject: {fileID: 679906796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a19b4b9cf5068642bad40a9faa491d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 17df086afd27c4441ba72dc39ebb97ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokedexGo: {fileID: 612730051}
-  pokedexContent: {fileID: 1685568903}
-  pokedexExample: {fileID: 1668240280}
-  pokedexCompleteText: {fileID: 318258192}
-  pokedexShinyText: {fileID: 935728018}
-  pokedexExamplePool:
-  - {fileID: 1668240280}
-  pokedexDetailGo: {fileID: 50720488}
-  pokedexDetailNameText: {fileID: 975911370}
-  pokedexDetailDescriptionText: {fileID: 663574670}
-  pokedexDetailAmountText: {fileID: 1598204469}
-  pokedexDetailBgImage: {fileID: 1615650509}
-  pokedexDetailPokemonImage: {fileID: 993842194}
-  pokedexDetailGenderImage: {fileID: 1535165597}
-  pokedexDetailEvolveImage: {fileID: 1602606837}
-  pokedexDetailAlolanFormButton: {fileID: 347768360}
-  pokedexDetailMaleButton: {fileID: 570737963}
-  pokedexDetailFemaleButton: {fileID: 1282037709}
-  pokedexDetailShinyButton: {fileID: 1146561649}
-  pokedexDetailEvolveButton: {fileID: 1628576659}
-  pokedexDetailSelect: {fileID: 0}
-  pokedexDetailShinyTrigger: 0
-  pokedexDetailGenderTrigger: 0
-  pokedexDetailAlolanFormTrigger: 0
---- !u!114 &679906801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679906796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d2a1188192c6849af7697e09cb9aa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 09857c66a9a187f40b66a0fc9792d6a3, type: 2}
-  configGo: {fileID: 1970621348}
-  configResetSaveText: {fileID: 787122359}
-  configButton: {fileID: 2134576288}
-  configFxSlider: {fileID: 1742831101}
-  configMusicSlider: {fileID: 736867923}
-  configVersionText: {fileID: 1877112479}
---- !u!114 &679906802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679906796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e59f77f22ae74a4cb197236d1805889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltipExpLevelGo: {fileID: 292038024}
-  tooltipExpLevelAnim: {fileID: 292038029}
-  tooltipExpLevelNewImage: {fileID: 313647560}
-  tooltipExpLevelTotalImage: {fileID: 1998131536}
-  tooltipExpLevelText: {fileID: 861434641}
+  DeleteThisVarAfter: 0
+  pokemons:
+  - loot: {fileID: 11400000, guid: 5750704e6478d7e47b442bb2a27d3296, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: ebc30a20eadcd4e4b94664f151a9bd95, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f6a64aee0d1967543a1c983494a6726b, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2f5f6de0e928da24b8a6d7e08f8363e8, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 677635b61fd12e44a98038b27ab8dec7, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: e386c8bb56b9f6447bf1581eec0cd293, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 9bd28cfa2bf167d49a0edca46205b136, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a9b10d216b1db8a4aac69f306f82fc34, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 23b9c82c7f69ef8439c2a7ed9a66b83b, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1b49b2c79670b1d4987be9de2300b3ed, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f004c43586cc0fe44933d6b18a3ace46, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 6f3fd1396366c6742baeb201ffbf3648, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: c1f96a10a510c8940a9b14cbf0230e12, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: bd5d9d7fcf8f76a4da2ae816ece10391, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 4c13dd4bd9ffe5245a67722058d2eac8, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: cbec3df54a8ed284ba2bb78b219be8a7, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a6576ed61ddfb2a4d94e29c839b49970, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 96068ad2ccb82e54b932a3418f64a1a9, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 034f39557ebf8554692859ec26d28f97, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 94764862c8b2f524fa36110144dab2a5, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 59b2b0a63f1b83548a3e2303a5bce99d, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1f018b55a4fa3f546801e740f72d806d, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 5172e6c9fe560d840809a5d9845647ef, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: c046c170ce1fa164b80b22f8439b56e8, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 94d871a9b6d53014c9c1e8ba5a892d51, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: af1daa98b6292454e8464aa9033081a3, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b95c8e78605603b47b35107e05c2e8b5, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: df9034d2112081146a467e0a7293fedf, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 02223a7554ed47e44a042c8695be4aa0, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b0ec4031ea2e4f74195c4996e4ef4fa0, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 22f02c5bc7acca44d95510fbf3521f9c, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: d5415de3beb098b4f838fd71e7d52868, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 608724a11ded7b04fbfb56e994b46ee9, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a1acfd4752aa84a438574c119d098d8a, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: aee870b3632dfd148a47debd99bbfd46, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a0685ac70b9e81a488ac8afa5317aece, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: d969fbcb8b42d0142b09149ab91a124b, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: bf17e80fd1848424f860e17f9cf270aa, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: fe1af6a7863e26e45ba6114a4bd0fa56, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f865f434df7058347b28f56de20a7992, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b75ece13ae48a204984db084c83a98a0, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: d0b00d9ae8151c2459c417cfc571fedd, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: fd9d1479f4719c447a261ccd7b21513f, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 01ac30ae567984848a9aeee9a057533b, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 7eb7af4ab65781441abf0044d7eadacd, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 636cdca6b3e634b478c2d41f73324cc2, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: c3c2af1abf517354dadb2ffbf41c6731, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 59e6c7e343b13bb41a0c140411efc7ce, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: ada71cedeb9f52549b85c9c4bc24cbf3, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: dcc435ec951ef3b47a1c6a688fec030f, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: ecd25d1fb95784c4cb140476554c2fe1, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1101e6d959bf4d6448a4aa778f40ff4d, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 8d015e5cac9530d4186d12867d70b569, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 188971922e0c69d499f84cd574423e09, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2450832d1ab66f441a23bd1e8ad9bede, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 54dc43c8f8f5039469d6b6cf5db89fac, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: e046bc5c8f17c964fb629c765fdde9b4, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 4f7c88e259f3248419c1fded23ded77b, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 032770719aad2b042bf0a1697651c416, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 8a7d59264008b8346a26a4c0211c84fc, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: bdb9e1d339afbed43ac90783b5dfaead, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: dc4e982a95815624495f1fab6a368a0f, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 686705642199fe4429e54b9ab061d156, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 69457ea9e25e93545aa5b967ab7ba7eb, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a1c44f265b2c11a448e1c5348e4b769a, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b54e00b1e67d0904e981601734fc4a01, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: cf4ed1ab47981ea43b78b48a32c59c21, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: dcb591d64c128e745969849330b043fe, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a3bf7878bac5fa546bf98f1937a8c5be, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2bf2987ef25c78e4b8bd4f28a5925237, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: ec673556e9ae27740a4c99fba93ebf48, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1b274ef6c4bcc064789caa1be134f18d, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 7e73db5d8a3bd1e499151798854f3ba9, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 59173c5e0b37b6540a65918844fb0186, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 815fe2bb76bd59f44a06e042a878fe5a, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b52a9683ed3b4cc49873dbcf6f6d7059, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 27f23678f51425640a9e0ce29affb7ed, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 694f49b2e2571654ca918589a6646267, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 884d2ef4cc173a54e85ed02df164aa8a, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: e1f08c82455d7f34abd959271d6fceaa, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 6939ade71edeff940a99b975c0590a8f, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f6750fcf4b18b9149b3f810f65247741, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2a90173f5c143764d8c1655232dca8b5, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: daf2af5fb8d18134ba5aa94bb9b19942, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: d8c512923578d094da33981b90011690, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: be0ea5dbe39bbd64e864aafccead8841, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 05706f5d8ab166d4aa17fd7e0a3c87b5, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b21b88e8bc5f2ff4e9f831bad67d71ca, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: dc807e9f9c7694a4582969c3e2bbda6e, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 91de72f7e3ef8684d900cafbaab63c16, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: adc22f75632df7949bee73fdecc6a9a4, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a30d7d7cc2693ab4387b3aa632c154d4, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 458961b6ba3c4fb41805372fa3b3613a, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 080280090b8c5554db96b0ba3257523f, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 984a7d9553afc4d4e8248d3b243014cd, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: c40d280055a12734182266062cc41478, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1adf1189b952c5646bd219485e224969, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 63701cf148f38944a95d5402b603963c, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 5b26d61ef7e531341bb75cc708305542, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 0587b64ab9acfb647b8fb31a72604763, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: df43fb05d70bc1e458b42296043faad6, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 3e227a3d8c635c247a784c658ae7ec33, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: fb1f11d677ca17c4b9ab7ecb893297cc, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 3bc68c1d2c35a1e49938ee82cb80c9a9, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 346b31416c6a66a4e9b951c96c8228a7, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2bbab2a12c5a4a849b99d47ee9df3ff3, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 35f92e25a7e2e964c9b5f1f5344b20d7, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 0780fb24bc1e3fb409d964ed303246f1, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: df43a63092cbcf24fb33062966079ce2, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 85da271cd31a5ad488c4ccc10d0d2a51, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 662d7a0c22e03c64a94f2b71a2969c31, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: afdbc8c250178c145ad3d3d93da35db5, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 052efede98383b546b92f2bb2e211fc6, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: eed50ab5b864ce1448fa59136777094f, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 778e3f11fc3e14d4fb18571ba14857c3, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b0d6e0700cb7b77419e4581873c9c00e, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: cf58d7b9ad588f048855764a9a2a009d, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: e35801d2b70bb40479d4bb65dd591935, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1e98c01967d3f254abd68ae1608d7b63, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f2e3db4afb795cb458bd340c8e832b83, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 32eb00af0625be7419dbeab8e3b576df, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 8fbee7bf09fe8c240a15284c58e3ea7e, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: e99097b33cee9a34f8f2c541887f9ce4, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1cbedc1b491e76f4c965cbc5a0aa27c2, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 706faed86bc98a046a51648a34e5a706, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: d52455cc66d49a245ba3f77e5ed67a34, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 4b03f18f2d56b444e875a2d995906496, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 8679279575984ba4680960c0b2db5404, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2ed6e3226e5cf8344addb953580d69e1, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 001634657483c284ba82b73a021db310, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: a62c5e07d60bb3d4ba57706488a8431f, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 3d1c394be388d014eb96b2952978333f, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: ad67b95953cafde4f89634461a144824, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: cbefffa7201e7bd4ba9795090e30ce7e, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 666eba9494638b341a94750f0299fbbe, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f5689d4642b082c4caa0174937ca7a9b, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 9daa4adcf90a31240983c1cda4288a3d, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: ba079f56d7f9dd3479896d6f407b8b92, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 3466fb2b224235d49b06040406a1e227, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 704d5a574015de5439e54b1d2b77b6de, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 86a0a58404cc143409e138462589ccc2, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 74d628e30e0810a4eb56edef798a3b8a, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 37a9dcb2d0c662b4f9815c8c5bb21f08, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 8b50dd6d751cdcf46802598fd11bb207, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 81df0ec7d4247f142b1650cbd7d8d927, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b9729d3d35a343e4e9e79d3273792206, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 40de9bd75210e2047a1cb2df634c2f3f, type: 2}
+    rarity: 0
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: c283c0e72d2657541af6c6a5818a58e2, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: bb4662bf6a66522409cde68f2583f524, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: d43314f331b2eed4584d4600f517a40b, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 37b041572c797bc49abebb20ba112dd8, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2fad391bc6cbb9745b191ac6c2f21f19, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 2f26f470e7ff9b443886ba57a69ba59a, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 7b28e032d49d7c84e867ccad7e8344dd, type: 2}
+    rarity: 1
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 164c6ecc98f08ac4fbfb4deb4bdbfb58, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 09baf3d2cdba5d74ca4054008b1f8db1, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 49239e2ccefd57d45a79ca35d7c6e52e, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: c4a22199c32f63a4bac1f28442015815, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 0a5f4d215f9d0c84ab9c4473d9b1495c, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 692d57c783da8664d85bc0c569a54fd0, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 6c3878e9dfd9a854583224882f5078a6, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 938ea5f52d0ecbc438ffb590528e645f, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: f8e69671c54551d45b7a166019e342a9, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: b7e41bbb01a2e074981de1f3cced115c, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 33d051d6fe450c74699e10b4a8345ad3, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 69c5cd01b789679449eae00cc97dd65b, type: 2}
+    rarity: 2
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 7e368a2e21a710743b78c555d55e901a, type: 2}
+    rarity: 3
+    canDrop: 1
+  - loot: {fileID: 11400000, guid: 1773eb9e035d12248a5f65c6b484b93c, type: 2}
+    rarity: 3
+    canDrop: 0
+  - loot: {fileID: 11400000, guid: 823484aef76c70f48bd6a355e32f01a8, type: 2}
+    rarity: 3
+    canDrop: 0
 --- !u!1 &690590220
 GameObject:
   m_ObjectHideFlags: 0
@@ -7191,7 +7759,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906801}
+      - m_Target: {fileID: 401480872}
         m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
@@ -10728,7 +11296,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2134576285}
-  - {fileID: 1711158852}
   - {fileID: 550985392}
   - {fileID: 1118734918}
   m_Father: {fileID: 1233462023}
@@ -10823,7 +11390,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679906801}
+      - m_Target: {fileID: 401480872}
         m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: ConfigButton
         m_Mode: 6
@@ -11412,7 +11979,7 @@ RectTransform:
   - {fileID: 282623958}
   - {fileID: 652551464}
   m_Father: {fileID: 1055227392}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -15850,558 +16417,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1634897088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1634897090}
-  - component: {fileID: 1634897089}
-  m_Layer: 0
-  m_Name: Pokedex
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1634897089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634897088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17df086afd27c4441ba72dc39ebb97ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeleteThisVarAfter: 0
-  pokemons:
-  - loot: {fileID: 11400000, guid: 5750704e6478d7e47b442bb2a27d3296, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: ebc30a20eadcd4e4b94664f151a9bd95, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f6a64aee0d1967543a1c983494a6726b, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2f5f6de0e928da24b8a6d7e08f8363e8, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 677635b61fd12e44a98038b27ab8dec7, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: e386c8bb56b9f6447bf1581eec0cd293, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 9bd28cfa2bf167d49a0edca46205b136, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a9b10d216b1db8a4aac69f306f82fc34, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 23b9c82c7f69ef8439c2a7ed9a66b83b, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1b49b2c79670b1d4987be9de2300b3ed, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f004c43586cc0fe44933d6b18a3ace46, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 6f3fd1396366c6742baeb201ffbf3648, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: c1f96a10a510c8940a9b14cbf0230e12, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: bd5d9d7fcf8f76a4da2ae816ece10391, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 4c13dd4bd9ffe5245a67722058d2eac8, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: cbec3df54a8ed284ba2bb78b219be8a7, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a6576ed61ddfb2a4d94e29c839b49970, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 96068ad2ccb82e54b932a3418f64a1a9, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 034f39557ebf8554692859ec26d28f97, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 94764862c8b2f524fa36110144dab2a5, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 59b2b0a63f1b83548a3e2303a5bce99d, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1f018b55a4fa3f546801e740f72d806d, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 5172e6c9fe560d840809a5d9845647ef, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: c046c170ce1fa164b80b22f8439b56e8, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 94d871a9b6d53014c9c1e8ba5a892d51, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: af1daa98b6292454e8464aa9033081a3, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b95c8e78605603b47b35107e05c2e8b5, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: df9034d2112081146a467e0a7293fedf, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 02223a7554ed47e44a042c8695be4aa0, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b0ec4031ea2e4f74195c4996e4ef4fa0, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 22f02c5bc7acca44d95510fbf3521f9c, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: d5415de3beb098b4f838fd71e7d52868, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 608724a11ded7b04fbfb56e994b46ee9, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a1acfd4752aa84a438574c119d098d8a, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: aee870b3632dfd148a47debd99bbfd46, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a0685ac70b9e81a488ac8afa5317aece, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: d969fbcb8b42d0142b09149ab91a124b, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: bf17e80fd1848424f860e17f9cf270aa, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: fe1af6a7863e26e45ba6114a4bd0fa56, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f865f434df7058347b28f56de20a7992, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b75ece13ae48a204984db084c83a98a0, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: d0b00d9ae8151c2459c417cfc571fedd, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: fd9d1479f4719c447a261ccd7b21513f, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 01ac30ae567984848a9aeee9a057533b, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 7eb7af4ab65781441abf0044d7eadacd, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 636cdca6b3e634b478c2d41f73324cc2, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: c3c2af1abf517354dadb2ffbf41c6731, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 59e6c7e343b13bb41a0c140411efc7ce, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: ada71cedeb9f52549b85c9c4bc24cbf3, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: dcc435ec951ef3b47a1c6a688fec030f, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: ecd25d1fb95784c4cb140476554c2fe1, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1101e6d959bf4d6448a4aa778f40ff4d, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 8d015e5cac9530d4186d12867d70b569, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 188971922e0c69d499f84cd574423e09, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2450832d1ab66f441a23bd1e8ad9bede, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 54dc43c8f8f5039469d6b6cf5db89fac, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: e046bc5c8f17c964fb629c765fdde9b4, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 4f7c88e259f3248419c1fded23ded77b, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 032770719aad2b042bf0a1697651c416, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 8a7d59264008b8346a26a4c0211c84fc, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: bdb9e1d339afbed43ac90783b5dfaead, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: dc4e982a95815624495f1fab6a368a0f, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 686705642199fe4429e54b9ab061d156, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 69457ea9e25e93545aa5b967ab7ba7eb, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a1c44f265b2c11a448e1c5348e4b769a, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b54e00b1e67d0904e981601734fc4a01, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: cf4ed1ab47981ea43b78b48a32c59c21, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: dcb591d64c128e745969849330b043fe, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a3bf7878bac5fa546bf98f1937a8c5be, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2bf2987ef25c78e4b8bd4f28a5925237, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: ec673556e9ae27740a4c99fba93ebf48, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1b274ef6c4bcc064789caa1be134f18d, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 7e73db5d8a3bd1e499151798854f3ba9, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 59173c5e0b37b6540a65918844fb0186, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 815fe2bb76bd59f44a06e042a878fe5a, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b52a9683ed3b4cc49873dbcf6f6d7059, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 27f23678f51425640a9e0ce29affb7ed, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 694f49b2e2571654ca918589a6646267, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 884d2ef4cc173a54e85ed02df164aa8a, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: e1f08c82455d7f34abd959271d6fceaa, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 6939ade71edeff940a99b975c0590a8f, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f6750fcf4b18b9149b3f810f65247741, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2a90173f5c143764d8c1655232dca8b5, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: daf2af5fb8d18134ba5aa94bb9b19942, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: d8c512923578d094da33981b90011690, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: be0ea5dbe39bbd64e864aafccead8841, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 05706f5d8ab166d4aa17fd7e0a3c87b5, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b21b88e8bc5f2ff4e9f831bad67d71ca, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: dc807e9f9c7694a4582969c3e2bbda6e, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 91de72f7e3ef8684d900cafbaab63c16, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: adc22f75632df7949bee73fdecc6a9a4, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a30d7d7cc2693ab4387b3aa632c154d4, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 458961b6ba3c4fb41805372fa3b3613a, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 080280090b8c5554db96b0ba3257523f, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 984a7d9553afc4d4e8248d3b243014cd, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: c40d280055a12734182266062cc41478, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1adf1189b952c5646bd219485e224969, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 63701cf148f38944a95d5402b603963c, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 5b26d61ef7e531341bb75cc708305542, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 0587b64ab9acfb647b8fb31a72604763, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: df43fb05d70bc1e458b42296043faad6, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 3e227a3d8c635c247a784c658ae7ec33, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: fb1f11d677ca17c4b9ab7ecb893297cc, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 3bc68c1d2c35a1e49938ee82cb80c9a9, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 346b31416c6a66a4e9b951c96c8228a7, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2bbab2a12c5a4a849b99d47ee9df3ff3, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 35f92e25a7e2e964c9b5f1f5344b20d7, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 0780fb24bc1e3fb409d964ed303246f1, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: df43a63092cbcf24fb33062966079ce2, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 85da271cd31a5ad488c4ccc10d0d2a51, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 662d7a0c22e03c64a94f2b71a2969c31, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: afdbc8c250178c145ad3d3d93da35db5, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 052efede98383b546b92f2bb2e211fc6, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: eed50ab5b864ce1448fa59136777094f, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 778e3f11fc3e14d4fb18571ba14857c3, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b0d6e0700cb7b77419e4581873c9c00e, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: cf58d7b9ad588f048855764a9a2a009d, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: e35801d2b70bb40479d4bb65dd591935, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1e98c01967d3f254abd68ae1608d7b63, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f2e3db4afb795cb458bd340c8e832b83, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 32eb00af0625be7419dbeab8e3b576df, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 8fbee7bf09fe8c240a15284c58e3ea7e, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: e99097b33cee9a34f8f2c541887f9ce4, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1cbedc1b491e76f4c965cbc5a0aa27c2, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 706faed86bc98a046a51648a34e5a706, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: d52455cc66d49a245ba3f77e5ed67a34, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 4b03f18f2d56b444e875a2d995906496, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 8679279575984ba4680960c0b2db5404, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2ed6e3226e5cf8344addb953580d69e1, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 001634657483c284ba82b73a021db310, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: a62c5e07d60bb3d4ba57706488a8431f, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 3d1c394be388d014eb96b2952978333f, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: ad67b95953cafde4f89634461a144824, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: cbefffa7201e7bd4ba9795090e30ce7e, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 666eba9494638b341a94750f0299fbbe, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f5689d4642b082c4caa0174937ca7a9b, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 9daa4adcf90a31240983c1cda4288a3d, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: ba079f56d7f9dd3479896d6f407b8b92, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 3466fb2b224235d49b06040406a1e227, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 704d5a574015de5439e54b1d2b77b6de, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 86a0a58404cc143409e138462589ccc2, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 74d628e30e0810a4eb56edef798a3b8a, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 37a9dcb2d0c662b4f9815c8c5bb21f08, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 8b50dd6d751cdcf46802598fd11bb207, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 81df0ec7d4247f142b1650cbd7d8d927, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b9729d3d35a343e4e9e79d3273792206, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 40de9bd75210e2047a1cb2df634c2f3f, type: 2}
-    rarity: 0
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: c283c0e72d2657541af6c6a5818a58e2, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: bb4662bf6a66522409cde68f2583f524, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: d43314f331b2eed4584d4600f517a40b, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 37b041572c797bc49abebb20ba112dd8, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2fad391bc6cbb9745b191ac6c2f21f19, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 2f26f470e7ff9b443886ba57a69ba59a, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 7b28e032d49d7c84e867ccad7e8344dd, type: 2}
-    rarity: 1
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 164c6ecc98f08ac4fbfb4deb4bdbfb58, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 09baf3d2cdba5d74ca4054008b1f8db1, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 49239e2ccefd57d45a79ca35d7c6e52e, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: c4a22199c32f63a4bac1f28442015815, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 0a5f4d215f9d0c84ab9c4473d9b1495c, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 692d57c783da8664d85bc0c569a54fd0, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 6c3878e9dfd9a854583224882f5078a6, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 938ea5f52d0ecbc438ffb590528e645f, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: f8e69671c54551d45b7a166019e342a9, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: b7e41bbb01a2e074981de1f3cced115c, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 33d051d6fe450c74699e10b4a8345ad3, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 69c5cd01b789679449eae00cc97dd65b, type: 2}
-    rarity: 2
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 7e368a2e21a710743b78c555d55e901a, type: 2}
-    rarity: 3
-    canDrop: 1
-  - loot: {fileID: 11400000, guid: 1773eb9e035d12248a5f65c6b484b93c, type: 2}
-    rarity: 3
-    canDrop: 0
-  - loot: {fileID: 11400000, guid: 823484aef76c70f48bd6a355e32f01a8, type: 2}
-    rarity: 3
-    canDrop: 0
---- !u!4 &1634897090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634897088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.142679, y: -2.4628155, z: -0.20843092}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635185134
 GameObject:
   m_ObjectHideFlags: 0
@@ -16564,7 +16579,7 @@ Transform:
   - {fileID: 1371324325}
   - {fileID: 1659854910}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1640301260
 Animator:
@@ -17343,12 +17358,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1055227392}
-  m_RootOrder: 1
+  m_Father: {fileID: 550985392}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 35, y: 30}
+  m_AnchoredPosition: {x: -744.2025, y: 30}
   m_SizeDelta: {x: 214, y: 212}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1711158853
@@ -17407,7 +17422,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906800}
+      - m_Target: {fileID: 401480871}
         m_TargetAssemblyTypeName: HudPokedex, Assembly-CSharp
         m_MethodName: OpenPokedex
         m_Mode: 6
@@ -18231,7 +18246,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906801}
+      - m_Target: {fileID: 401480872}
         m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: SetFxVolume
         m_Mode: 0
@@ -21930,7 +21945,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 679906801}
+      - m_Target: {fileID: 401480872}
         m_TargetAssemblyTypeName: HudConfig, Assembly-CSharp
         m_MethodName: ConfigButton
         m_Mode: 6

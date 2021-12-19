@@ -231,59 +231,6 @@ public class HudManager : MonoBehaviour
     }
     #endregion
 
-    // #region Tooltip Pokedex
-    // // ------------ Tooltip Pokedex-------------
-    // public void ToolTipPokedex(Sprite img,string name,Gender gender,bool shiny)
-    // {       
-    //     if(img != null)
-    //     {
-    //         TooltipPokedexLine tt = new TooltipPokedexLine();
-    //         tt.img    = img;
-    //         tt.name   = name;
-    //         tt.gender = gender;
-    //         tt.shiny  = shiny;
-    //         tooltipPokedexLine.Add(tt);
-    //     }
-            
-
-    //     if(tooltipPokedexActive || tooltipPokedexLine.Count <= 0 || !tooltipPokedexCanActive)
-    //         return; 
-
-    //     Invoke("ShowToolTipPokedex", 1.0f);
-    // }
-
-    // void ShowToolTipPokedex()
-    // {   
-    //     if(tooltipPokedexLine.Count < 1 || !tooltipPokedexCanActive)
-    //         return;
-
-    //     TooltipPokedexLine tt = tooltipPokedexLine[0];
-
-    //     tooltipPokedexLine.RemoveAt(0);
-    //     tooltipPokedexActive = true;
-    //     tooltipPokedexPokemonImage.sprite = tt.img;
-    //     tooltipPokedexText.text    = (tt.shiny ? "<color=yellow>"+tt.name.ToUpper()+"</color>" : tt.name.ToUpper())+"'s data was\nadded to the POKEDEX.";
-    //     tooltipPokedexGenderImage.sprite = genders[(int)tt.gender];
-
-    //     tooltipPokedexAnim.SetTrigger("Show");
-
-    //     Invoke("CloseToolTipPokedex", 7.0f);
-    // }
-
-    // void CloseToolTipPokedex()
-    // {
-    //     tooltipPokedexAnim.SetTrigger("Close");
-
-    //     if(tooltipPokedexLine.Count >= 1)
-    //     {
-    //         Invoke("ShowToolTipPokedex", 2.0f);
-    //         return;
-    //     }
-
-    //     tooltipPokedexActive = false;   
-    // }
-    // #endregion
-
     #region DropList
     // ------------ DropList-------------
     public void LootDropList(List<LootScriptable> loots,float common=-1,float rare =-1,float epic =-1,float legendary =-1,float shiny =-1)
