@@ -220,7 +220,7 @@ public class DropPokeball : MonoBehaviour
 
     IEnumerator DropLootNumber(int lootNumber=-1,bool promo=false)
     {
-        HudManager.Instance.tooltipPokedexCanActive = false;
+        HudToolTipPokedex.Instance.tooltipPokedexCanActive = false;
 
         float C=0,R=0,E=0,L=0,S=0;
 

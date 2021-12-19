@@ -437,7 +437,7 @@ public class Pokedex : MonoBehaviour
         {
             PlayerPrefs.SetInt(key, 1);
 
-            HudManager.Instance.ToolTipPokedex(pk.pokemon,pk.Name,pk.gender,pk.shiny);
+            HudToolTipPokedex.Instance.ToolTipPokedex(pk.pokemon,pk.Name,pk.gender,pk.shiny);
            
             DropRarity r = GetLootDrop(pk).rarity;
             expM.SetExp(expM.GetRarityExp(r),pk.shiny);

@@ -57,7 +57,7 @@ public class HudPokedex : MonoBehaviour
 
     public void OpenPokedex(bool open=true)
     {
-        HudManager.Instance.tooltipPokedexCanActive = !open;
+        HudToolTipPokedex.Instance.tooltipPokedexCanActive = !open;
 
             if(open)
             {

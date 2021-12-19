@@ -9,16 +9,6 @@ using UnityEngine.Audio;
     using UnityEditor;
 #endif
 
-
-[System.Serializable] 
-public class TooltipPokedexLine 
-{ 
-    public Sprite img;
-    public string name;
-    public Gender gender;
-    public bool shiny;
-}
-
 [System.Serializable] 
 public enum CurrentScene
 {
@@ -47,15 +37,6 @@ public class HudManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI    LootCountText;
     [SerializeField] Button             caughtButton;
     [SerializeField] Image              mainBackgroundImage;
-    [Header("Tooltip Pokedex")]
-    [SerializeField] Animator           tooltipPokedexAnim;
-    [SerializeField] Image              tooltipPokedexPokemonImage;
-    [SerializeField] TextMeshProUGUI    tooltipPokedexText;
-    /// <summary>Use genders[Male,Female,Unknown]</summary>
-    [SerializeField] Image              tooltipPokedexGenderImage;
-                    bool                tooltipPokedexActive        =   false;
-    public          bool                tooltipPokedexCanActive     =   true;
-    List<TooltipPokedexLine>            tooltipPokedexLine          =   new List<TooltipPokedexLine>();
     [Header("Drop List")]
     [SerializeField] GameObject         dropListGo;
     [SerializeField] GameObject         dropListContent;
@@ -106,6 +87,7 @@ public class HudManager : MonoBehaviour
 
     Pokedex pdx;
     ExpLevelManager expM;
+    HudToolTipPokedex hTTP;
 
     public bool LootPokemon;
 
@@ -123,6 +105,7 @@ public class HudManager : MonoBehaviour
     {              
         pdx  = Pokedex.Instance;
         expM = ExpLevelManager.Instance;
+        hTTP = HudToolTipPokedex.Instance;
 
         LoadingSave();
 
@@ -248,58 +231,58 @@ public class HudManager : MonoBehaviour
     }
     #endregion
 
-    #region Tooltip Pokedex
-    // ------------ Tooltip Pokedex-------------
-    public void ToolTipPokedex(Sprite img,string name,Gender gender,bool shiny)
-    {       
-        if(img != null)
-        {
-            TooltipPokedexLine tt = new TooltipPokedexLine();
-            tt.img    = img;
-            tt.name   = name;
-            tt.gender = gender;
-            tt.shiny  = shiny;
-            tooltipPokedexLine.Add(tt);
-        }
+    // #region Tooltip Pokedex
+    // // ------------ Tooltip Pokedex-------------
+    // public void ToolTipPokedex(Sprite img,string name,Gender gender,bool shiny)
+    // {       
+    //     if(img != null)
+    //     {
+    //         TooltipPokedexLine tt = new TooltipPokedexLine();
+    //         tt.img    = img;
+    //         tt.name   = name;
+    //         tt.gender = gender;
+    //         tt.shiny  = shiny;
+    //         tooltipPokedexLine.Add(tt);
+    //     }
             
 
-        if(tooltipPokedexActive || tooltipPokedexLine.Count <= 0 || !tooltipPokedexCanActive)
-            return; 
+    //     if(tooltipPokedexActive || tooltipPokedexLine.Count <= 0 || !tooltipPokedexCanActive)
+    //         return; 
 
-        Invoke("ShowToolTipPokedex", 1.0f);
-    }
+    //     Invoke("ShowToolTipPokedex", 1.0f);
+    // }
 
-    void ShowToolTipPokedex()
-    {   
-        if(tooltipPokedexLine.Count < 1 || !tooltipPokedexCanActive)
-            return;
+    // void ShowToolTipPokedex()
+    // {   
+    //     if(tooltipPokedexLine.Count < 1 || !tooltipPokedexCanActive)
+    //         return;
 
-        TooltipPokedexLine tt = tooltipPokedexLine[0];
+    //     TooltipPokedexLine tt = tooltipPokedexLine[0];
 
-        tooltipPokedexLine.RemoveAt(0);
-        tooltipPokedexActive = true;
-        tooltipPokedexPokemonImage.sprite = tt.img;
-        tooltipPokedexText.text    = (tt.shiny ? "<color=yellow>"+tt.name.ToUpper()+"</color>" : tt.name.ToUpper())+"'s data was\nadded to the POKEDEX.";
-        tooltipPokedexGenderImage.sprite = genders[(int)tt.gender];
+    //     tooltipPokedexLine.RemoveAt(0);
+    //     tooltipPokedexActive = true;
+    //     tooltipPokedexPokemonImage.sprite = tt.img;
+    //     tooltipPokedexText.text    = (tt.shiny ? "<color=yellow>"+tt.name.ToUpper()+"</color>" : tt.name.ToUpper())+"'s data was\nadded to the POKEDEX.";
+    //     tooltipPokedexGenderImage.sprite = genders[(int)tt.gender];
 
-        tooltipPokedexAnim.SetTrigger("Show");
+    //     tooltipPokedexAnim.SetTrigger("Show");
 
-        Invoke("CloseToolTipPokedex", 7.0f);
-    }
+    //     Invoke("CloseToolTipPokedex", 7.0f);
+    // }
 
-    void CloseToolTipPokedex()
-    {
-        tooltipPokedexAnim.SetTrigger("Close");
+    // void CloseToolTipPokedex()
+    // {
+    //     tooltipPokedexAnim.SetTrigger("Close");
 
-        if(tooltipPokedexLine.Count >= 1)
-        {
-            Invoke("ShowToolTipPokedex", 2.0f);
-            return;
-        }
+    //     if(tooltipPokedexLine.Count >= 1)
+    //     {
+    //         Invoke("ShowToolTipPokedex", 2.0f);
+    //         return;
+    //     }
 
-        tooltipPokedexActive = false;   
-    }
-    #endregion
+    //     tooltipPokedexActive = false;   
+    // }
+    // #endregion
 
     #region DropList
     // ------------ DropList-------------
@@ -383,7 +366,7 @@ public class HudManager : MonoBehaviour
         if(active &&  dropListPokemons.Count < 1)
             return;        
 
-        tooltipPokedexCanActive = !active;
+        hTTP.tooltipPokedexCanActive = !active;
 
         int poolCount = dropListExamplePool.Count;
 
@@ -397,7 +380,7 @@ public class HudManager : MonoBehaviour
             for (int i = 0; i < poolCount; i++)
                 dropListExamplePool[i].gameObject.SetActive(false); 
 
-            if(!tooltipPokedexActive || tooltipPokedexLine.Count > 0)
+            if(!hTTP.tooltipPokedexActive || hTTP.tooltipPokedexLine.Count > 0)
                 Invoke("ShowToolTipPokedex", 1.0f);
 
             NextListEvolutionScene();
@@ -469,7 +452,7 @@ public class HudManager : MonoBehaviour
             return false;
         }
 
-        tooltipPokedexCanActive = false;
+        hTTP.tooltipPokedexCanActive = false;
         
         UpdateCurrentScene = CurrentScene.EvolveScene;
 
@@ -598,10 +581,10 @@ public class HudManager : MonoBehaviour
             NextListEvolutionScene();
         else
         {
-            if(!tooltipPokedexActive || tooltipPokedexLine.Count > 0)
+            if(!hTTP.tooltipPokedexActive || hTTP.tooltipPokedexLine.Count > 0)
                 Invoke("ShowToolTipPokedex", 1.0f);
 
-            tooltipPokedexCanActive = true;
+            hTTP.tooltipPokedexCanActive = true;
         }
     }
 
@@ -609,10 +592,10 @@ public class HudManager : MonoBehaviour
     {
         if(evolutionListPokemons.Count <= 0)
         {
-            if(!tooltipPokedexActive || tooltipPokedexLine.Count > 0)
+            if(!hTTP.tooltipPokedexActive || hTTP.tooltipPokedexLine.Count > 0)
                 Invoke("ShowToolTipPokedex", 1.0f);
                 
-            tooltipPokedexCanActive = true;
+            hTTP.tooltipPokedexCanActive = true;
 
             return;
         }
