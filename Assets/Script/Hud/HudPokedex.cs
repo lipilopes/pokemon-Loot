@@ -29,9 +29,13 @@ public class HudPokedex : MonoBehaviour
     [SerializeField] Button             pokedexDetailFemaleButton;
     [SerializeField] Button             pokedexDetailShinyButton;
     [SerializeField] Button             pokedexDetailEvolveButton;
+    [HideInInspector]
     public LootScriptable     pokedexDetailSelect;
+    [HideInInspector]
     public bool               pokedexDetailShinyTrigger  = false;
+    [HideInInspector]
     public bool               pokedexDetailGenderTrigger = false;
+    [HideInInspector]
     public bool               pokedexDetailAlolanFormTrigger = false;
 
     Pokedex pdx;
@@ -154,7 +158,7 @@ public class HudPokedex : MonoBehaviour
             UpdatePokedex(pk);
 
             PokedexContent pkC  =   pokedexExamplePool[pk.id-1].GetComponent<PokedexContent>();
-            pkC.Button.onClick.AddListener(() => LoadPokemonDetail(pk));       
+            pkC.Button.onClick.AddListener(() => LoadPokemonDetail(pk));     
         }
                
         pokedexDetailMaleButton.onClick.AddListener(() => UpdatePokemonImagePokedexDetail(true));
@@ -167,7 +171,6 @@ public class HudPokedex : MonoBehaviour
 
 
      #region Pokedex Detail
-     //------------ Pokedex Detail-------------
     public Gender PokemonDetailGender()
     {
         if(pokedexDetailSelect == null)

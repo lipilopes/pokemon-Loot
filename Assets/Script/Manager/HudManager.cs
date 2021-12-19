@@ -81,12 +81,6 @@ public class HudManager : MonoBehaviour
     WaitForSeconds                      timeToEvolve                = new WaitForSeconds(5.5f);
     WaitForSeconds                      timeAutoOpenScene           = new WaitForSeconds(2.5f);
     WaitForSeconds                      timeNextListEvolutionScene  = new WaitForSeconds(5f);
-    [Header("Exp/Level")]
-    [SerializeField] GameObject         tooltipExpLevelGo;
-    [SerializeField] Animator           tooltipExpLevelAnim;
-    [SerializeField] Image              tooltipExpLevelNewImage;//white
-    [SerializeField] Image              tooltipExpLevelTotalImage;//red
-    [SerializeField] TextMeshProUGUI    tooltipExpLevelText;
     [Header("Bonus")]
     [Tooltip("When SkipAnim is deactivated it gains a glow bonus"),Range(0,1)]
     [SerializeField] float              skipAnimDisableBonusShiny   = 0.04f;
@@ -704,80 +698,5 @@ public class HudManager : MonoBehaviour
         Debug.Log("Dropdown["+v+"] -> "+(LootType)v);
     }
 
-    #endregion
-
-    #region Exp/Level
-    // ------------ Exp/Level ------------- 
-    public void UpdateExpLevel(bool anim=true,bool playAudio=true)
-    {
-        ExpLevelManager expM = ExpLevelManager.Instance;
-
-        if(anim)
-        {
-            tooltipExpLevelAnim.SetTrigger("Show");
-            
-            if(tooltipExpLevelText.text != ExpLevelManager.Instance.Level.ToString())
-            {
-                UpdateExpLevelUP();
-                tooltipExpLevelTotalImage.fillAmount = 0;
-            }             
-        }
-
-        tooltipExpLevelNewImage.fillAmount = expM.Exp / expM.MaxExp;
-
-        StartCoroutine(UpdateExpLevelTotalBar(anim,playAudio));
-    }
-
-    WaitForSeconds waitExpLevel   = new WaitForSeconds(0.45f+0.05f);//Anim Time + delay
-    WaitForSeconds waitExpLevelToClose   = new WaitForSeconds(2f);
-    IEnumerator UpdateExpLevelTotalBar(bool anim=true,bool playAudio=true)
-    {
-        yield return waitExpLevel;
-
-        if(playAudio)
-            tooltipExpLevelGo.GetComponent<PlayAudio>().PlayAudioClip(2);
-
-        while (tooltipExpLevelNewImage.fillAmount != tooltipExpLevelTotalImage.fillAmount)
-        {
-            if (tooltipExpLevelTotalImage.fillAmount > tooltipExpLevelNewImage.fillAmount)
-            {
-                tooltipExpLevelTotalImage.fillAmount = tooltipExpLevelNewImage.fillAmount;
-                break;
-            }
-            else
-                if (tooltipExpLevelTotalImage.fillAmount < tooltipExpLevelNewImage.fillAmount)
-            {
-                if ((tooltipExpLevelNewImage.fillAmount - tooltipExpLevelTotalImage.fillAmount) <= 0.19f)//0.77f
-                    tooltipExpLevelTotalImage.fillAmount += 0.004f;
-                else
-                    tooltipExpLevelTotalImage.fillAmount += 0.01f;//0.009f;
-
-                yield return null;
-            }
-        }
-
-        if(tooltipExpLevelTotalImage.fillAmount == 1)
-        {   
-            UpdateExpLevelUP();  
-
-            yield return waitExpLevel;  
-
-            tooltipExpLevelTotalImage.fillAmount = 0;
-            tooltipExpLevelNewImage.fillAmount   = 0;
-        }
-
-        yield return waitExpLevelToClose;
-
-        if(anim && tooltipExpLevelNewImage.fillAmount == tooltipExpLevelTotalImage.fillAmount)
-            tooltipExpLevelAnim.SetTrigger("Close");
-    }
-
-    public void UpdateExpLevelUP(bool playAudio=true)
-    {
-        tooltipExpLevelText.text = ""+ExpLevelManager.Instance.Level;
-
-        if(playAudio)
-            tooltipExpLevelGo.GetComponent<PlayAudio>().PlayAudioClip(3,false);
-    }
     #endregion
 }

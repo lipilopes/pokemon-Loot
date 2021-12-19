@@ -64,8 +64,8 @@ public class ExpLevelManager : MonoBehaviour
         expTotal    = PlayerPrefs.GetFloat("TotalExp", 0);
         CalcMaxExp();
 
-        HudManager.Instance.UpdateExpLevel(expTotal > 0,false);
-        HudManager.Instance.UpdateExpLevelUP(false);                       
+        HudExpLevel.Instance.UpdateExpLevel(expTotal > 0,false);
+        HudExpLevel.Instance.UpdateExpLevelUP(false);                       
     }
 
     public void Bonus(bool levelUp=false)
@@ -218,7 +218,7 @@ public class ExpLevelManager : MonoBehaviour
 
         expTotal    = PlayerPrefs.GetFloat("TotalExp", 0);
 
-        HudManager.Instance.UpdateExpLevel();
+        HudExpLevel.Instance.UpdateExpLevel();
 
         if(exp >= MaxExp)
         {
